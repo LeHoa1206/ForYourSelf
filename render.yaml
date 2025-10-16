@@ -1,0 +1,40 @@
+services:
+  # Main Web Service
+  - type: web
+    name: vip-english-learning
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DB_HOST
+        fromDatabase:
+          name: vip-english-db
+          property: host
+      - key: DB_NAME
+        fromDatabase:
+          name: vip-english-db
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          name: vip-english-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: vip-english-db
+          property: password
+
+  # Database
+  - type: pserv
+    name: vip-english-db
+    env: docker
+    plan: starter
+    dockerfilePath: |
+      FROM mysql:8.0
+      ENV MYSQL_ROOT_PASSWORD=rootpassword123
+      ENV MYSQL_DATABASE=vip_english_learning
+      ENV MYSQL_USER=vip_user
+      ENV MYSQL_PASSWORD=vip_password123
+      COPY database/ /docker-entrypoint-initdb.d/
+      EXPOSE 3306

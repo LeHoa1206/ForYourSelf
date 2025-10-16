@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP English Learning - React Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .status {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        .success { color: #4ade80; }
+        .error { color: #f87171; }
+        .info { color: #60a5fa; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 VIP English Learning</h1>
+        <p>Trang test React Frontend hoạt động</p>
+        
+        <div class="status">
+            <h3>📊 Trạng thái React Frontend:</h3>
+            <div id="react-status">🔄 Đang kiểm tra...</div>
+        </div>
+
+        <div class="status">
+            <h3>🚀 Các trang React có sẵn:</h3>
+            <div class="grid">
+                <a href="http://localhost:3000/" class="btn">🏠 Home</a>
+                <a href="http://localhost:3000/dashboard" class="btn">📊 Dashboard</a>
+                <a href="http://localhost:3000/vocabulary" class="btn">📚 Vocabulary</a>
+                <a href="http://localhost:3000/vocabulary-learning" class="btn">🎓 Learn</a>
+                <a href="http://localhost:3000/video-learning" class="btn">🎥 Video</a>
+                <a href="http://localhost:3000/quizzes" class="btn">🧠 Quizzes</a>
+                <a href="http://localhost:3000/grammar" class="btn">📖 Grammar</a>
+                <a href="http://localhost:3000/conversations" class="btn">💬 AI Chat</a>
+                <a href="http://localhost:3000/admin" class="btn">⚙️ Admin</a>
+            </div>
+        </div>
+
+        <div class="status">
+            <h3>🔗 Trang HTML hoạt động:</h3>
+            <div class="grid">
+                <a href="http://localhost:3000/vocabulary_learning_working.html" class="btn">📚 Vocabulary Learning</a>
+                <a href="http://localhost:3000/vocabulary_working.html" class="btn">🎯 Vocabulary Premium</a>
+                <a href="http://localhost:3000/vocabulary_final.html" class="btn">✨ Vocabulary Final</a>
+                <a href="http://localhost:3000/system_test.html" class="btn">🧪 System Test</a>
+            </div>
+        </div>
+
+        <div class="status">
+            <h3>📋 Hướng dẫn sử dụng:</h3>
+            <p>1. <strong>Trang HTML:</strong> Hoạt động tốt, có thể sử dụng ngay</p>
+            <p>2. <strong>Trang React:</strong> Đang có vấn đề với routing, cần sửa</p>
+            <p>3. <strong>API Backend:</strong> Hoạt động tốt tại <code>http://localhost:8000</code></p>
+            <p>4. <strong>Database:</strong> Kết nối tốt với MySQL</p>
+        </div>
+
+        <div id="results" class="status" style="display: none;">
+            <h3>📋 Kết quả test:</h3>
+            <div id="results-content"></div>
+        </div>
+    </div>
+
+    <script>
+        // Test React Frontend
+        async function testReact() {
+            const resultsDiv = document.getElementById('results');
+            const contentDiv = document.getElementById('results-content');
+            
+            resultsDiv.style.display = 'block';
+            contentDiv.innerHTML = '🔄 Đang test React Frontend...';
+            
+            // Try to access React routes
+            const routes = [
+                '/',
+                '/dashboard',
+                '/vocabulary',
+                '/vocabulary-learning',
+                '/video-learning',
+                '/quizzes',
+                '/grammar',
+                '/conversations',
+                '/admin'
+            ];
+            
+            let results = '<h4>React Routes Test:</h4>';
+            let completed = 0;
+            
+            routes.forEach(route => {
+                fetch('http://localhost:3000' + route)
+                    .then(response => {
+                        if (response.ok) {
+                            results += `<div class="success">✅ ${route}: OK</div>`;
+                        } else {
+                            results += `<div class="error">❌ ${route}: ${response.status}</div>`;
+                        }
+                        completed++;
+                        if (completed === routes.length) {
+                            contentDiv.innerHTML = results;
+                        }
+                    })
+                    .catch(error => {
+                        results += `<div class="error">❌ ${route}: ${error.message}</div>`;
+                        completed++;
+                        if (completed === routes.length) {
+                            contentDiv.innerHTML = results;
+                        }
+                    });
+            });
+        }
+
+        // Test React status on page load
+        window.addEventListener('load', () => {
+            fetch('http://localhost:3000/')
+                .then(response => {
+                    if (response.ok) {
+                        document.getElementById('react-status').innerHTML = '✅ React Frontend: Hoạt động tốt!';
+                        document.getElementById('react-status').className = 'success';
+                    } else {
+                        throw new Error('React không phản hồi');
+                    }
+                })
+                .catch(error => {
+                    document.getElementById('react-status').innerHTML = '❌ React Frontend: Lỗi - ' + error.message;
+                    document.getElementById('react-status').className = 'error';
+                });
+        });
+    </script>
+</body>
+</html>

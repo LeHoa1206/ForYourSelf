@@ -1,0 +1,3 @@
+Word,Meaning,Phonetic,Type,Example,Audio,TopicID,LanguageID,Difficulty,IsActive
+test,kiểm tra,/test/,Noun,This is a test,https://audio.com/test.mp3,1,1,Easy,1
+hello,xin chào,/həˈloʊ/,Interjection,Hello world,https://audio.com/hello.mp3,1,1,Easy,1

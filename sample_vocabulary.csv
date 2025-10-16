@@ -1,0 +1,9 @@
+Word,Meaning,Phonetic,Type,Example,Audio,TopicID,LanguageID,Difficulty,IsActive
+father,cha bố,/ˈfɑːðər/,Noun,My father is tall,https://audio.com/father.mp3,1,1,Easy,1
+mother,mẹ má,/ˈmʌðər/,Noun,My mother cooks well,https://audio.com/mother.mp3,1,1,Easy,1
+brother,anh em trai,/ˈbrʌðər/,Noun,My brother is young,https://audio.com/brother.mp3,1,1,Easy,1
+sister,chị em gái,/ˈsɪstər/,Noun,My sister is beautiful,https://audio.com/sister.mp3,1,1,Easy,1
+apple,táo,/ˈæpəl/,Noun,I eat an apple,https://audio.com/apple.mp3,2,1,Easy,1
+banana,chuối,/bəˈnɑːnə/,Noun,The banana is yellow,https://audio.com/banana.mp3,2,1,Easy,1
+orange,cam,/ˈɔːrɪndʒ/,Noun,Orange juice is good,https://audio.com/orange.mp3,2,1,Medium,1
+water,nước,/ˈwɔːtər/,Noun,Water is important,https://audio.com/water.mp3,2,1,Easy,1

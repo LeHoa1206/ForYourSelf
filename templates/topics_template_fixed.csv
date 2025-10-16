@@ -1,0 +1,11 @@
+﻿LanguageID,Title,Description,Level,Icon,Color,SortOrder
+1,"Gia đình","Chủ đề về gia đình và các mối quan hệ",A1,👨‍👩‍👧‍👦,#EF4444,1
+1,"Thức ăn","Đồ ăn và thức uống",A1,🍕,#10B981,2
+1,"Nhà cửa","Nhà và đồ nội thất",A1,🏠,#3B82F6,3
+1,"Màu sắc","Màu sắc và hình dạng",A1,🎨,#8B5CF6,4
+1,"Số đếm","Số và thời gian",A1,🔢,#F59E0B,5
+2,Family,"Family and relationships",A1,👨‍👩‍👧‍👦,#EF4444,1
+2,Food,"Food and drinks",A1,🍕,#10B981,2
+2,Home,"Home and furniture",A1,🏠,#3B82F6,3
+2,Colors,"Colors and shapes",A1,🎨,#8B5CF6,4
+2,Numbers,"Numbers and time",A1,🔢,#F59E0B,5

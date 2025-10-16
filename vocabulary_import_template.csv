@@ -1,0 +1,11 @@
+Word,Meaning,Phonetic,Type,Example,Audio,TopicID,LanguageID,Difficulty,IsActive
+father,cha bố,/ˈfɑːðər/,Noun,My father is a doctor.,https://example.com/audio/father.mp3,1,1,Easy,1
+mother,mẹ,/ˈmʌðər/,Noun,My mother cooks well.,https://example.com/audio/mother.mp3,1,1,Easy,1
+brother,anh trai,/ˈbrʌðər/,Noun,My brother is tall.,https://example.com/audio/brother.mp3,1,1,Easy,1
+sister,chị gái,/ˈsɪstər/,Noun,My sister is beautiful.,https://example.com/audio/sister.mp3,1,1,Easy,1
+apple,táo,/ˈæpəl/,Noun,I eat an apple every day.,https://example.com/audio/apple.mp3,2,1,Easy,1
+banana,chuối,/bəˈnɑːnə/,Noun,The banana is yellow.,https://example.com/audio/banana.mp3,2,1,Easy,1
+orange,cam,/ˈɔːrɪndʒ/,Noun,Orange juice is healthy.,https://example.com/audio/orange.mp3,2,1,Easy,1
+red,đỏ,/red/,Adjective,The red car is fast.,https://example.com/audio/red.mp3,3,1,Easy,1
+blue,xanh dương,/bluː/,Adjective,The blue sky is clear.,https://example.com/audio/blue.mp3,3,1,Easy,1
+green,xanh lá,/ɡriːn/,Adjective,Green grass is fresh.,https://example.com/audio/green.mp3,3,1,Easy,1

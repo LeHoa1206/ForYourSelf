@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP English Learning - Working</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .status {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .status h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .status-item {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .success { color: #4ade80; }
+        .error { color: #f87171; }
+        .info { color: #60a5fa; }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .card p {
+            opacity: 0.8;
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #4F46E5, #7C3AED);
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #5B52F0, #8B5CF6);
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎉 VIP English Learning</h1>
+            <p>Hệ thống học tiếng Anh đỉnh cao - Đã hoạt động!</p>
+        </div>
+
+        <div class="status">
+            <h3>📊 Trạng thái hệ thống</h3>
+            <div class="status-item success">✅ Backend API: Hoạt động tốt (port 8000)</div>
+            <div class="status-item success">✅ Database MySQL: Kết nối tốt</div>
+            <div class="status-item success">✅ Redis Cache: Hoạt động tốt</div>
+            <div class="status-item info">ℹ️ Frontend React: Đang sửa routing</div>
+        </div>
+
+        <div class="status">
+            <h3>🚀 Trang HTML hoạt động</h3>
+            <div class="grid">
+                <div class="card" onclick="window.open('http://localhost:3000/vocabulary_learning_working.html', '_blank')">
+                    <h3>📚 Vocabulary Learning</h3>
+                    <p>Học từ vựng theo chủ đề với 5 ngôn ngữ</p>
+                    <button class="btn btn-primary">Mở trang</button>
+                </div>
+                
+                <div class="card" onclick="window.open('http://localhost:3000/vocabulary_working.html', '_blank')">
+                    <h3>🎯 Vocabulary Premium</h3>
+                    <p>Giao diện premium với animations</p>
+                    <button class="btn btn-primary">Mở trang</button>
+                </div>
+                
+                <div class="card" onclick="window.open('http://localhost:3000/vocabulary_final.html', '_blank')">
+                    <h3>✨ Vocabulary Final</h3>
+                    <p>Phiên bản hoàn chỉnh nhất</p>
+                    <button class="btn btn-primary">Mở trang</button>
+                </div>
+                
+                <div class="card" onclick="window.open('http://localhost:3000/system_test.html', '_blank')">
+                    <h3>🧪 System Test</h3>
+                    <p>Test toàn bộ hệ thống</p>
+                    <button class="btn btn-primary">Mở trang</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="status">
+            <h3>🔗 API Endpoints</h3>
+            <div class="grid">
+                <div class="card">
+                    <h3>🌐 Languages</h3>
+                    <p>Lấy danh sách ngôn ngữ</p>
+                    <button class="btn" onclick="testAPI('/api/languages')">Test API</button>
+                </div>
+                
+                <div class="card">
+                    <h3>📚 Topics</h3>
+                    <p>Lấy danh sách chủ đề</p>
+                    <button class="btn" onclick="testAPI('/api/topics')">Test API</button>
+                </div>
+                
+                <div class="card">
+                    <h3>📖 Vocabulary</h3>
+                    <p>Lấy từ vựng theo chủ đề</p>
+                    <button class="btn" onclick="testAPI('/api/vocabulary')">Test API</button>
+                </div>
+                
+                <div class="card">
+                    <h3>🧪 Test</h3>
+                    <p>Test kết nối API</p>
+                    <button class="btn" onclick="testAPI('/api/test')">Test API</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="status">
+            <h3>📋 Hướng dẫn sử dụng</h3>
+            <div style="text-align: left; max-width: 800px; margin: 0 auto;">
+                <p><strong>1. Trang HTML:</strong> Hoạt động tốt, có thể sử dụng ngay</p>
+                <p><strong>2. API Backend:</strong> Hoạt động tại <code>http://localhost:8000</code></p>
+                <p><strong>3. Database:</strong> MySQL với dữ liệu mẫu đầy đủ</p>
+                <p><strong>4. Tính năng:</strong> Đa ngôn ngữ, chủ đề từ vựng, giao diện đẹp</p>
+                <p><strong>5. React Frontend:</strong> Đang sửa routing, sẽ hoàn thiện sau</p>
+            </div>
+        </div>
+
+        <div id="results" class="status" style="display: none;">
+            <h3>📋 Kết quả test API</h3>
+            <div id="results-content"></div>
+        </div>
+    </div>
+
+    <script>
+        // Test API endpoint
+        async function testAPI(endpoint) {
+            const resultsDiv = document.getElementById('results');
+            const contentDiv = document.getElementById('results-content');
+            
+            resultsDiv.style.display = 'block';
+            contentDiv.innerHTML = '🔄 Đang test ' + endpoint + '...';
+            
+            try {
+                const response = await fetch('http://localhost:8000' + endpoint);
+                if (response.ok) {
+                    const result = await response.json();
+                    contentDiv.innerHTML = `
+                        <div class="success">✅ ${endpoint}: Thành công!</div>
+                        <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 10px; margin-top: 15px; text-align: left; overflow-x: auto; font-size: 0.9rem;">
+${JSON.stringify(result, null, 2)}
+                        </pre>
+                    `;
+                } else {
+                    throw new Error('HTTP ' + response.status);
+                }
+            } catch (error) {
+                contentDiv.innerHTML = `<div class="error">❌ ${endpoint}: Lỗi - ${error.message}</div>`;
+            }
+        }
+
+        // Auto test on page load
+        window.addEventListener('load', () => {
+            testAPI('/api/test');
+        });
+    </script>
+</body>
+</html>

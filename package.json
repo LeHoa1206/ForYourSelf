@@ -1,0 +1,15 @@
+{
+  "name": "vip-english-learning",
+  "version": "1.0.0",
+  "description": "VIP English Learning Platform",
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "preview": "cd frontend && npm run preview",
+    "install-frontend": "cd frontend && npm install",
+    "start": "php -S 0.0.0.0:8000 -t backend"
+  },
+  "keywords": ["english", "learning", "vocabulary", "news"],
+  "author": "VIP English",
+  "license": "MIT"
+}

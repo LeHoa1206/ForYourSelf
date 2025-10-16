@@ -1,0 +1,108 @@
+Word,Phonetic,Type,Meaning,Example,Audio,TopicID,LanguageID,Difficulty
+一,yī,number,one,一个苹果,one.mp3,1,3,Easy
+二,èr,number,two,两个苹果,two.mp3,1,3,Easy
+三,sān,number,three,三个苹果,three.mp3,1,3,Easy
+四,sì,number,four,四个苹果,four.mp3,1,3,Easy
+五,wǔ,number,five,五个苹果,five.mp3,1,3,Easy
+六,liù,number,six,六个苹果,six.mp3,1,3,Easy
+七,qī,number,seven,七个苹果,seven.mp3,1,3,Easy
+八,bā,number,eight,八个苹果,eight.mp3,1,3,Easy
+九,jiǔ,number,nine,九个苹果,nine.mp3,1,3,Easy
+十,shí,number,ten,十个苹果,ten.mp3,1,3,Easy
+爸爸,bàba,noun,father,我爸爸是医生,father.mp3,1,3,Easy
+妈妈,māma,noun,mother,我妈妈做饭很好吃,mother.mp3,1,3,Easy
+哥哥,gēge,noun,older brother,我哥哥在上大学,brother.mp3,1,3,Easy
+姐姐,jiějie,noun,older sister,我姐姐很漂亮,sister.mp3,1,3,Easy
+弟弟,dìdi,noun,younger brother,我弟弟很可爱,younger_brother.mp3,1,3,Easy
+妹妹,mèimei,noun,younger sister,我妹妹很聪明,younger_sister.mp3,1,3,Easy
+家,jiā,noun,home,我的家很温馨,home.mp3,1,3,Easy
+人,rén,noun,person,这个人很友好,person.mp3,1,3,Easy
+我,wǒ,pronoun,I,我是学生,I.mp3,1,3,Easy
+你,nǐ,pronoun,you,你好吗,you.mp3,1,3,Easy
+他,tā,pronoun,he,他是我的朋友,he.mp3,1,3,Easy
+她,tā,pronoun,she,她是我的老师,she.mp3,1,3,Easy
+我们,wǒmen,pronoun,we,我们是同学,we.mp3,1,3,Easy
+你们,nǐmen,pronoun,you (plural),你们好吗,you_plural.mp3,1,3,Easy
+他们,tāmen,pronoun,they,他们是我的朋友,they.mp3,1,3,Easy
+是,shì,verb,to be,我是学生,to_be.mp3,1,3,Easy
+有,yǒu,verb,to have,我有一个苹果,to_have.mp3,1,3,Easy
+在,zài,verb,to be at,我在学校,to_be_at.mp3,1,3,Easy
+去,qù,verb,to go,我去学校,to_go.mp3,1,3,Easy
+来,lái,verb,to come,来我家,to_come.mp3,1,3,Easy
+看,kàn,verb,to see,看这本书,to_see.mp3,1,3,Easy
+听,tīng,verb,to listen,听音乐,to_listen.mp3,1,3,Easy
+说,shuō,verb,to speak,说中文,to_speak.mp3,1,3,Easy
+吃,chī,verb,to eat,吃饭,to_eat.mp3,1,3,Easy
+喝,hē,verb,to drink,喝水,to_drink.mp3,1,3,Easy
+买,mǎi,verb,to buy,买苹果,to_buy.mp3,1,3,Easy
+卖,mài,verb,to sell,卖东西,to_sell.mp3,1,3,Easy
+做,zuò,verb,to do,做作业,to_do.mp3,1,3,Easy
+学习,xuéxí,verb,to study,学习中文,to_study.mp3,1,3,Easy
+工作,gōngzuò,verb,to work,工作很忙,to_work.mp3,1,3,Easy
+睡觉,shuìjiào,verb,to sleep,睡觉,to_sleep.mp3,1,3,Easy
+起床,qǐchuáng,verb,to get up,起床,to_get_up.mp3,1,3,Easy
+好,hǎo,adjective,good,很好,good.mp3,1,3,Easy
+大,dà,adjective,big,很大,big.mp3,1,3,Easy
+小,xiǎo,adjective,small,很小,small.mp3,1,3,Easy
+新,xīn,adjective,new,新书,new.mp3,1,3,Easy
+旧,jiù,adjective,old,旧书,old.mp3,1,3,Easy
+多,duō,adjective,many,很多,many.mp3,1,3,Easy
+少,shǎo,adjective,few,很少,few.mp3,1,3,Easy
+高,gāo,adjective,tall,很高,tall.mp3,1,3,Easy
+矮,ǎi,adjective,short,很矮,short.mp3,1,3,Easy
+长,cháng,adjective,long,很长,long.mp3,1,3,Easy
+短,duǎn,adjective,short,很短,short.mp3,1,3,Easy
+红,hóng,adjective,red,红色的苹果,red.mp3,1,3,Easy
+蓝,lán,adjective,blue,蓝色的天空,blue.mp3,1,3,Easy
+绿,lǜ,adjective,green,绿色的草,green.mp3,1,3,Easy
+黄,huáng,adjective,yellow,黄色的花,yellow.mp3,1,3,Easy
+黑,hēi,adjective,black,黑色的头发,black.mp3,1,3,Easy
+白,bái,adjective,white,白色的云,white.mp3,1,3,Easy
+今天,jīntiān,time,today,今天天气很好,today.mp3,1,3,Easy
+明天,míngtiān,time,tomorrow,明天见,tomorrow.mp3,1,3,Easy
+昨天,zuótiān,time,yesterday,昨天我去了学校,yesterday.mp3,1,3,Easy
+现在,xiànzài,time,now,现在几点了,now.mp3,1,3,Easy
+早上,zǎoshang,time,morning,早上好,morning.mp3,1,3,Easy
+中午,zhōngwǔ,time,noon,中午吃饭,noon.mp3,1,3,Easy
+晚上,wǎnshang,time,evening,晚上好,evening.mp3,1,3,Easy
+年,nián,time,year,今年,year.mp3,1,3,Easy
+月,yuè,time,month,这个月,month.mp3,1,3,Easy
+日,rì,time,day,今天,day.mp3,1,3,Easy
+星期,xīngqī,time,week,这个星期,week.mp3,1,3,Easy
+学校,xuéxiào,noun,school,我在学校学习,school.mp3,1,3,Easy
+老师,lǎoshī,noun,teacher,我的老师很好,teacher.mp3,1,3,Easy
+学生,xuéshēng,noun,student,我是学生,student.mp3,1,3,Easy
+朋友,péngyǒu,noun,friend,他是我的朋友,friend.mp3,1,3,Easy
+同学,tóngxué,noun,classmate,我的同学,classmate.mp3,1,3,Easy
+书,shū,noun,book,这本书很好,book.mp3,1,3,Easy
+笔,bǐ,noun,pen,用笔写字,pen.mp3,1,3,Easy
+纸,zhǐ,noun,paper,一张纸,paper.mp3,1,3,Easy
+桌子,zhuōzi,noun,table,桌子很大,table.mp3,1,3,Easy
+椅子,yǐzi,noun,chair,坐在椅子上,chair.mp3,1,3,Easy
+门,mén,noun,door,开门,door.mp3,1,3,Easy
+窗,chuāng,noun,window,开窗,window.mp3,1,3,Easy
+房间,fángjiān,noun,room,我的房间,room.mp3,1,3,Easy
+床,chuáng,noun,bed,睡觉的床,bed.mp3,1,3,Easy
+衣服,yīfu,noun,clothes,穿衣服,clothes.mp3,1,3,Easy
+鞋子,xiézi,noun,shoes,穿鞋子,shoes.mp3,1,3,Easy
+帽子,màozi,noun,hat,戴帽子,hat.mp3,1,3,Easy
+包,bāo,noun,bag,背书包,bag.mp3,1,3,Easy
+手机,shǒujī,noun,phone,打电话,phone.mp3,1,3,Easy
+电脑,diànnǎo,noun,computer,用电脑,computer.mp3,1,3,Easy
+电视,diànshì,noun,TV,看电视,TV.mp3,1,3,Easy
+音乐,yīnyuè,noun,music,听音乐,music.mp3,1,3,Easy
+电影,diànyǐng,noun,movie,看电影,movie.mp3,1,3,Easy
+游戏,yóuxì,noun,game,玩游戏,game.mp3,1,3,Easy
+运动,yùndòng,noun,sports,做运动,sports.mp3,1,3,Easy
+跑步,pǎobù,verb,to run,跑步锻炼,to_run.mp3,1,3,Easy
+游泳,yóuyǒng,verb,to swim,游泳,to_swim.mp3,1,3,Easy
+跳舞,tiàowǔ,verb,to dance,跳舞,to_dance.mp3,1,3,Easy
+唱歌,chànggē,verb,to sing,唱歌,to_sing.mp3,1,3,Easy
+画画,huàhuà,verb,to draw,画画,to_draw.mp3,1,3,Easy
+写字,xiězì,verb,to write,写字,to_write.mp3,1,3,Easy
+读书,dúshū,verb,to read,读书,to_read.mp3,1,3,Easy
+说话,shuōhuà,verb,to talk,说话,to_talk.mp3,1,3,Easy
+吃饭,chīfàn,verb,to eat,吃饭,to_eat.mp3,1,3,Easy
+喝水,hēshuǐ,verb,to drink,喝水,to_drink.mp3,1,3,Easy
+睡觉,shuìjiào,verb,to sleep,睡觉,to_sleep.mp3,1,3,Easy
+起床,qǐchuáng,verb,to get up,起床,to_get_up.mp3,1,3,Easy

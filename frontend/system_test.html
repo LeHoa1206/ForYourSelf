@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP English Learning - Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .status {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        .success { color: #4ade80; }
+        .error { color: #f87171; }
+        .info { color: #60a5fa; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 VIP English Learning</h1>
+        <p>Trang test hệ thống hoạt động</p>
+        
+        <div class="status">
+            <h3>📊 Trạng thái hệ thống:</h3>
+            <div id="backend-status">🔄 Đang kiểm tra Backend API...</div>
+            <div id="frontend-status">🔄 Đang kiểm tra Frontend...</div>
+            <div id="database-status">🔄 Đang kiểm tra Database...</div>
+        </div>
+
+        <div class="status">
+            <h3>🚀 Các trang có sẵn:</h3>
+            <button class="btn" onclick="window.open('http://localhost:3000/vocabulary_learning_working.html', '_blank')">
+                📚 Vocabulary Learning (HTML)
+            </button>
+            <button class="btn" onclick="window.open('http://localhost:3000/vocabulary_working.html', '_blank')">
+                🎯 Vocabulary Premium (HTML)
+            </button>
+            <button class="btn" onclick="window.open('http://localhost:3000/vocabulary_final.html', '_blank')">
+                ✨ Vocabulary Final (HTML)
+            </button>
+            <button class="btn" onclick="testReact()">
+                ⚛️ Test React Frontend
+            </button>
+        </div>
+
+        <div class="status">
+            <h3>🔗 API Endpoints:</h3>
+            <button class="btn" onclick="testAPI('/api/test')">Test API</button>
+            <button class="btn" onclick="testAPI('/api/languages')">Languages</button>
+            <button class="btn" onclick="testAPI('/api/topics')">Topics</button>
+            <button class="btn" onclick="testAPI('/api/vocabulary')">Vocabulary</button>
+        </div>
+
+        <div id="results" class="status" style="display: none;">
+            <h3>📋 Kết quả test:</h3>
+            <div id="results-content"></div>
+        </div>
+    </div>
+
+    <script>
+        // Test Backend API
+        async function testBackend() {
+            try {
+                const response = await fetch('http://localhost:8000/api/test');
+                if (response.ok) {
+                    const result = await response.json();
+                    document.getElementById('backend-status').innerHTML = '✅ Backend API: Hoạt động tốt!';
+                    document.getElementById('backend-status').className = 'success';
+                } else {
+                    throw new Error('Backend không phản hồi');
+                }
+            } catch (error) {
+                document.getElementById('backend-status').innerHTML = '❌ Backend API: Lỗi - ' + error.message;
+                document.getElementById('backend-status').className = 'error';
+            }
+        }
+
+        // Test Frontend
+        async function testFrontend() {
+            try {
+                const response = await fetch('http://localhost:3000/');
+                if (response.ok) {
+                    document.getElementById('frontend-status').innerHTML = '✅ Frontend: Hoạt động tốt!';
+                    document.getElementById('frontend-status').className = 'success';
+                } else {
+                    throw new Error('Frontend không phản hồi');
+                }
+            } catch (error) {
+                document.getElementById('frontend-status').innerHTML = '❌ Frontend: Lỗi - ' + error.message;
+                document.getElementById('frontend-status').className = 'error';
+            }
+        }
+
+        // Test Database
+        async function testDatabase() {
+            try {
+                const response = await fetch('http://localhost:8000/api/languages');
+                if (response.ok) {
+                    const result = await response.json();
+                    if (result.success && result.data.length > 0) {
+                        document.getElementById('database-status').innerHTML = '✅ Database: Kết nối tốt! (' + result.data.length + ' ngôn ngữ)';
+                        document.getElementById('database-status').className = 'success';
+                    } else {
+                        throw new Error('Database không có dữ liệu');
+                    }
+                } else {
+                    throw new Error('Database không phản hồi');
+                }
+            } catch (error) {
+                document.getElementById('database-status').innerHTML = '❌ Database: Lỗi - ' + error.message;
+                document.getElementById('database-status').className = 'error';
+            }
+        }
+
+        // Test specific API endpoint
+        async function testAPI(endpoint) {
+            const resultsDiv = document.getElementById('results');
+            const contentDiv = document.getElementById('results-content');
+            
+            resultsDiv.style.display = 'block';
+            contentDiv.innerHTML = '🔄 Đang test ' + endpoint + '...';
+            
+            try {
+                const response = await fetch('http://localhost:8000' + endpoint);
+                if (response.ok) {
+                    const result = await response.json();
+                    contentDiv.innerHTML = `
+                        <div class="success">✅ ${endpoint}: Thành công!</div>
+                        <pre style="background: rgba(0,0,0,0.3); padding: 10px; border-radius: 5px; margin-top: 10px; text-align: left; overflow-x: auto;">
+${JSON.stringify(result, null, 2)}
+                        </pre>
+                    `;
+                } else {
+                    throw new Error('HTTP ' + response.status);
+                }
+            } catch (error) {
+                contentDiv.innerHTML = `<div class="error">❌ ${endpoint}: Lỗi - ${error.message}</div>`;
+            }
+        }
+
+        // Test React Frontend
+        function testReact() {
+            const resultsDiv = document.getElementById('results');
+            const contentDiv = document.getElementById('results-content');
+            
+            resultsDiv.style.display = 'block';
+            contentDiv.innerHTML = '🔄 Đang test React Frontend...';
+            
+            // Try to access React routes
+            const routes = [
+                '/',
+                '/dashboard',
+                '/vocabulary',
+                '/vocabulary-learning',
+                '/video-learning',
+                '/quizzes',
+                '/grammar',
+                '/conversations',
+                '/admin'
+            ];
+            
+            let results = '<h4>React Routes Test:</h4>';
+            let completed = 0;
+            
+            routes.forEach(route => {
+                fetch('http://localhost:3000' + route)
+                    .then(response => {
+                        if (response.ok) {
+                            results += `<div class="success">✅ ${route}: OK</div>`;
+                        } else {
+                            results += `<div class="error">❌ ${route}: ${response.status}</div>`;
+                        }
+                        completed++;
+                        if (completed === routes.length) {
+                            contentDiv.innerHTML = results;
+                        }
+                    })
+                    .catch(error => {
+                        results += `<div class="error">❌ ${route}: ${error.message}</div>`;
+                        completed++;
+                        if (completed === routes.length) {
+                            contentDiv.innerHTML = results;
+                        }
+                    });
+            });
+        }
+
+        // Run tests on page load
+        window.addEventListener('load', () => {
+            testBackend();
+            testFrontend();
+            testDatabase();
+        });
+    </script>
+</body>
+</html>

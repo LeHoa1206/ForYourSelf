@@ -1,0 +1,150 @@
+Word,Phonetic,Type,Meaning,Example,Audio,TopicID,LanguageID,Difficulty
+什么,shénme,pronoun,what,这是什么,what.mp3,2,3,Medium
+怎么,zěnme,pronoun,how,怎么去学校,how.mp3,2,3,Medium
+哪里,nǎlǐ,pronoun,where,你在哪里,where.mp3,2,3,Medium
+为什么,wèishénme,pronoun,why,为什么学习中文,why.mp3,2,3,Medium
+什么时候,shénmeshíhòu,pronoun,when,什么时候上课,when.mp3,2,3,Medium
+多少,duōshǎo,pronoun,how many,多少钱,how_many.mp3,2,3,Medium
+哪个,nǎge,pronoun,which,哪个是你的,which.mp3,2,3,Medium
+谁,shéi,pronoun,who,你是谁,who.mp3,2,3,Medium
+哪,nǎ,pronoun,which,哪本书,which.mp3,2,3,Medium
+这,zhè,pronoun,this,这是我的书,this.mp3,2,3,Medium
+那,nà,pronoun,that,那是我的车,that.mp3,2,3,Medium
+这些,zhèxiē,pronoun,these,这些是我的,these.mp3,2,3,Medium
+那些,nàxiē,pronoun,those,那些是你的,those.mp3,2,3,Medium
+每,měi,pronoun,every,每天,every.mp3,2,3,Medium
+各,gè,pronoun,each,各个,each.mp3,2,3,Medium
+自己,zìjǐ,pronoun,oneself,我自己,oneself.mp3,2,3,Medium
+别人,biérén,pronoun,others,别人怎么说,others.mp3,2,3,Medium
+大家,dàjiā,pronoun,everyone,大家好,everyone.mp3,2,3,Medium
+别人,biérén,pronoun,other people,别人的东西,other_people.mp3,2,3,Medium
+自己,zìjǐ,pronoun,self,自己的事情,self.mp3,2,3,Medium
+会,huì,verb,can,我会说中文,can.mp3,2,3,Medium
+能,néng,verb,can,我能帮助你,can.mp3,2,3,Medium
+可以,kěyǐ,verb,can,可以进来吗,can.mp3,2,3,Medium
+应该,yīnggāi,verb,should,应该学习,should.mp3,2,3,Medium
+必须,bìxū,verb,must,必须完成,must.mp3,2,3,Medium
+需要,xūyào,verb,need,需要帮助,need.mp3,2,3,Medium
+想要,xiǎngyào,verb,want,想要学习,want.mp3,2,3,Medium
+希望,xīwàng,verb,hope,希望成功,hope.mp3,2,3,Medium
+喜欢,xǐhuān,verb,like,喜欢音乐,like.mp3,2,3,Medium
+爱,ài,verb,love,爱家人,love.mp3,2,3,Medium
+知道,zhīdào,verb,know,知道答案,know.mp3,2,3,Medium
+认识,rènshi,verb,know,认识朋友,know.mp3,2,3,Medium
+明白,míngbai,verb,understand,明白意思,understand.mp3,2,3,Medium
+记得,jìde,verb,remember,记得名字,remember.mp3,2,3,Medium
+忘记,wàngjì,verb,forget,忘记时间,forget.mp3,2,3,Medium
+想,xiǎng,verb,think,想问题,think.mp3,2,3,Medium
+觉得,juéde,verb,feel,觉得很好,feel.mp3,2,3,Medium
+认为,rènwéi,verb,think,认为正确,think.mp3,2,3,Medium
+相信,xiāngxìn,verb,believe,相信你,believe.mp3,2,3,Medium
+担心,dānxīn,verb,worry,担心考试,worry.mp3,2,3,Medium
+害怕,hàipà,verb,afraid,害怕黑暗,afraid.mp3,2,3,Medium
+高兴,gāoxìng,adjective,happy,很高兴,happy.mp3,2,3,Medium
+快乐,kuàilè,adjective,happy,很快乐,happy.mp3,2,3,Medium
+开心,kāixīn,adjective,happy,很开心,happy.mp3,2,3,Medium
+难过,nánguò,adjective,sad,很难过,sad.mp3,2,3,Medium
+生气,shēngqì,adjective,angry,很生气,angry.mp3,2,3,Medium
+紧张,jǐnzhāng,adjective,nervous,很紧张,nervous.mp3,2,3,Medium
+放松,fàngsōng,adjective,relaxed,很放松,relaxed.mp3,2,3,Medium
+累,lèi,adjective,tired,很累,tired.mp3,2,3,Medium
+忙,máng,adjective,busy,很忙,busy.mp3,2,3,Medium
+闲,xián,adjective,free,很闲,free.mp3,2,3,Medium
+容易,róngyì,adjective,easy,很容易,easy.mp3,2,3,Medium
+难,nán,adjective,difficult,很难,difficult.mp3,2,3,Medium
+重要,zhòngyào,adjective,important,很重要,important.mp3,2,3,Medium
+有用,yǒuyòng,adjective,useful,很有用,useful.mp3,2,3,Medium
+有趣,yǒuqù,adjective,interesting,很有趣,interesting.mp3,2,3,Medium
+无聊,wúliáo,adjective,boring,很无聊,boring.mp3,2,3,Medium
+漂亮,piàoliang,adjective,beautiful,很漂亮,beautiful.mp3,2,3,Medium
+帅,shuài,adjective,handsome,很帅,handsome.mp3,2,3,Medium
+可爱,kěài,adjective,cute,很可爱,cute.mp3,2,3,Medium
+聪明,cōngmíng,adjective,smart,很聪明,smart.mp3,2,3,Medium
+笨,bèn,adjective,stupid,很笨,stupid.mp3,2,3,Medium
+年轻,niánqīng,adjective,young,很年轻,young.mp3,2,3,Medium
+老,lǎo,adjective,old,很老,old.mp3,2,3,Medium
+健康,jiànkāng,adjective,healthy,很健康,healthy.mp3,2,3,Medium
+病,bìng,adjective,sick,生病了,sick.mp3,2,3,Medium
+饿,è,adjective,hungry,很饿,hungry.mp3,2,3,Medium
+渴,kě,adjective,thirsty,很渴,thirsty.mp3,2,3,Medium
+冷,lěng,adjective,cold,很冷,cold.mp3,2,3,Medium
+热,rè,adjective,hot,很热,hot.mp3,2,3,Medium
+温暖,wēnnuǎn,adjective,warm,很温暖,warm.mp3,2,3,Medium
+凉快,liángkuai,adjective,cool,很凉快,cool.mp3,2,3,Medium
+干净,gānjìng,adjective,clean,很干净,clean.mp3,2,3,Medium
+脏,zāng,adjective,dirty,很脏,dirty.mp3,2,3,Medium
+安静,ānjìng,adjective,quiet,很安静,quiet.mp3,2,3,Medium
+吵,chǎo,adjective,noisy,很吵,noisy.mp3,2,3,Medium
+快,kuài,adjective,fast,很快,fast.mp3,2,3,Medium
+慢,màn,adjective,slow,很慢,slow.mp3,2,3,Medium
+早,zǎo,adjective,early,很早,early.mp3,2,3,Medium
+晚,wǎn,adjective,late,很晚,late.mp3,2,3,Medium
+准时,zhǔnshí,adjective,on time,很准时,on_time.mp3,2,3,Medium
+迟到,chídào,adjective,late,迟到了,late.mp3,2,3,Medium
+准时,zhǔnshí,adjective,punctual,很准时,punctual.mp3,2,3,Medium
+经常,jīngcháng,adverb,often,经常学习,often.mp3,2,3,Medium
+总是,zǒngshì,adverb,always,总是这样,always.mp3,2,3,Medium
+从不,cóngbù,adverb,never,从不迟到,never.mp3,2,3,Medium
+有时,yǒushí,adverb,sometimes,有时来,sometimes.mp3,2,3,Medium
+很少,hěnshǎo,adverb,seldom,很少来,seldom.mp3,2,3,Medium
+很,hěn,adverb,very,很好,very.mp3,2,3,Medium
+太,tài,adverb,too,太好了,too.mp3,2,3,Medium
+最,zuì,adverb,most,最好,most.mp3,2,3,Medium
+更,gèng,adverb,more,更好,more.mp3,2,3,Medium
+比较,bǐjiào,adverb,quite,比较好,quite.mp3,2,3,Medium
+特别,tèbié,adverb,especially,特别好,especially.mp3,2,3,Medium
+非常,fēicháng,adverb,very,非常好,very.mp3,2,3,Medium
+真,zhēn,adverb,really,真好,really.mp3,2,3,Medium
+真的,zhēnde,adverb,really,真的吗,really.mp3,2,3,Medium
+当然,dāngrán,adverb,of course,当然可以,of_course.mp3,2,3,Medium
+可能,kěnéng,adverb,maybe,可能来,maybe.mp3,2,3,Medium
+也许,yěxǔ,adverb,perhaps,也许对,perhaps.mp3,2,3,Medium
+一定,yídìng,adverb,certainly,一定来,certainly.mp3,2,3,Medium
+肯定,kěndìng,adverb,definitely,肯定对,definitely.mp3,2,3,Medium
+大概,dàgài,adverb,probably,大概对,probably.mp3,2,3,Medium
+差不多,chàbuduō,adverb,almost,差不多好,almost.mp3,2,3,Medium
+几乎,jīhū,adverb,almost,几乎完成,almost.mp3,2,3,Medium
+完全,wánquán,adverb,completely,完全正确,completely.mp3,2,3,Medium
+部分,bùfèn,adverb,partly,部分正确,partly.mp3,2,3,Medium
+一起,yìqǐ,adverb,together,一起学习,together.mp3,2,3,Medium
+单独,dāndú,adverb,alone,单独学习,alone.mp3,2,3,Medium
+终于,zhōngyú,adverb,finally,终于完成了,finally.mp3,2,3,Medium
+突然,tūrán,adverb,suddenly,突然下雨,suddenly.mp3,2,3,Medium
+马上,mǎshàng,adverb,immediately,马上来,immediately.mp3,2,3,Medium
+立刻,lìkè,adverb,immediately,立刻来,immediately.mp3,2,3,Medium
+然后,ránhòu,adverb,then,然后学习,then.mp3,2,3,Medium
+接着,jiēzhe,adverb,then,接着做,then.mp3,2,3,Medium
+首先,shǒuxiān,adverb,first,首先学习,first.mp3,2,3,Medium
+最后,zuìhòu,adverb,finally,最后完成,finally.mp3,2,3,Medium
+开始,kāishǐ,verb,start,开始学习,start.mp3,2,3,Medium
+结束,jiéshù,verb,finish,结束学习,finish.mp3,2,3,Medium
+继续,jìxù,verb,continue,继续学习,continue.mp3,2,3,Medium
+停止,tíngzhǐ,verb,stop,停止学习,stop.mp3,2,3,Medium
+完成,wánchéng,verb,complete,完成作业,complete.mp3,2,3,Medium
+成功,chénggōng,verb,succeed,成功完成,succeed.mp3,2,3,Medium
+失败,shībài,verb,fail,失败了,fail.mp3,2,3,Medium
+努力,nǔlì,verb,work hard,努力学习,work_hard.mp3,2,3,Medium
+帮助,bāngzhù,verb,help,帮助朋友,help.mp3,2,3,Medium
+支持,zhīchí,verb,support,支持你,support.mp3,2,3,Medium
+鼓励,gǔlì,verb,encourage,鼓励学习,encourage.mp3,2,3,Medium
+建议,jiànyì,verb,suggest,建议学习,suggest.mp3,2,3,Medium
+同意,tóngyì,verb,agree,同意你的意见,agree.mp3,2,3,Medium
+反对,fǎnduì,verb,disagree,反对意见,disagree.mp3,2,3,Medium
+接受,jiēshòu,verb,accept,接受建议,accept.mp3,2,3,Medium
+拒绝,jùjué,verb,refuse,拒绝邀请,refuse.mp3,2,3,Medium
+邀请,yāoqǐng,verb,invite,邀请朋友,invite.mp3,2,3,Medium
+参加,cānjiā,verb,participate,参加会议,participate.mp3,2,3,Medium
+离开,líkāi,verb,leave,离开学校,leave.mp3,2,3,Medium
+到达,dàodá,verb,arrive,到达学校,arrive.mp3,2,3,Medium
+出发,chūfā,verb,depart,出发旅行,depart.mp3,2,3,Medium
+回来,huílái,verb,return,回来学校,return.mp3,2,3,Medium
+出去,chūqù,verb,go out,出去散步,go_out.mp3,2,3,Medium
+进来,jìnlái,verb,come in,进来房间,come_in.mp3,2,3,Medium
+上去,shàngqù,verb,go up,上去楼梯,go_up.mp3,2,3,Medium
+下来,xiàlái,verb,come down,下来楼梯,come_down.mp3,2,3,Medium
+进去,jìnqù,verb,go in,进去房间,go_in.mp3,2,3,Medium
+出来,chūlái,verb,come out,出来房间,come_out.mp3,2,3,Medium
+过去,guòqù,verb,go over,过去马路,go_over.mp3,2,3,Medium
+过来,guòlái,verb,come over,过来这里,come_over.mp3,2,3,Medium
+上去,shàngqù,verb,go up,上去楼上,go_up.mp3,2,3,Medium
+下来,xiàlái,verb,come down,下来楼下,come_down.mp3,2,3,Medium

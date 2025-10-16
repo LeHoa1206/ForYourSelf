@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Topics API</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .topic { border: 1px solid #ccc; margin: 10px 0; padding: 15px; border-radius: 8px; }
+        .topic h3 { color: #333; margin: 0 0 10px 0; }
+        .topic p { color: #666; margin: 5px 0; }
+        .icon { font-size: 24px; margin-right: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Test Topics API</h1>
+    <div id="topics"></div>
+
+    <script>
+        async function loadTopics() {
+            try {
+                const response = await fetch('http://localhost:8000/api/topics?languageId=1');
+                const data = await response.json();
+                
+                if (data.success) {
+                    const topicsDiv = document.getElementById('topics');
+                    data.data.forEach(topic => {
+                        const topicDiv = document.createElement('div');
+                        topicDiv.className = 'topic';
+                        topicDiv.innerHTML = `
+                            <h3><span class="icon">${topic.Icon}</span>${topic.Title}</h3>
+                            <p><strong>Mô tả:</strong> ${topic.Description}</p>
+                            <p><strong>Level:</strong> ${topic.Level}</p>
+                            <p><strong>Số từ vựng:</strong> ${topic.VocabularyCount || 'N/A'}</p>
+                        `;
+                        topicsDiv.appendChild(topicDiv);
+                    });
+                } else {
+                    document.getElementById('topics').innerHTML = '<p>Lỗi: ' + data.message + '</p>';
+                }
+            } catch (error) {
+                document.getElementById('topics').innerHTML = '<p>Lỗi: ' + error.message + '</p>';
+            }
+        }
+
+        loadTopics();
+    </script>
+</body>
+</html>

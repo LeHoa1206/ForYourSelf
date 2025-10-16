@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test UTF-8 Encoding</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-item { margin: 10px 0; padding: 10px; border: 1px solid #ccc; }
+        .success { background-color: #d4edda; }
+        .error { background-color: #f8d7da; }
+    </style>
+</head>
+<body>
+    <h1>Test UTF-8 Encoding</h1>
+    <div id="results"></div>
+
+    <script>
+        async function testEncoding() {
+            const resultsDiv = document.getElementById('results');
+            
+            try {
+                const response = await fetch('http://localhost:8000/api/topics');
+                const data = await response.json();
+                
+                if (data.success && data.data) {
+                    const topics = data.data.slice(0, 5); // Test first 5 topics
+                    
+                    topics.forEach(topic => {
+                        const div = document.createElement('div');
+                        div.className = 'test-item';
+                        
+                        // Check if encoding is correct
+                        const hasQuestionMarks = topic.Title.includes('?') || topic.Description.includes('?');
+                        
+                        if (hasQuestionMarks) {
+                            div.className += ' error';
+                            div.innerHTML = `
+                                <strong>❌ Encoding Error:</strong><br>
+                                Title: ${topic.Title}<br>
+                                Description: ${topic.Description}<br>
+                                LanguageID: ${topic.LanguageID}
+                            `;
+                        } else {
+                            div.className += ' success';
+                            div.innerHTML = `
+                                <strong>✅ Encoding OK:</strong><br>
+                                Title: ${topic.Title}<br>
+                                Description: ${topic.Description}<br>
+                                LanguageID: ${topic.LanguageID}
+                            `;
+                        }
+                        
+                        resultsDiv.appendChild(div);
+                    });
+                } else {
+                    resultsDiv.innerHTML = '<div class="test-item error">❌ Failed to fetch data</div>';
+                }
+            } catch (error) {
+                resultsDiv.innerHTML = `<div class="test-item error">❌ Error: ${error.message}</div>`;
+            }
+        }
+        
+        // Run test when page loads
+        testEncoding();
+    </script>
+</body>
+</html>

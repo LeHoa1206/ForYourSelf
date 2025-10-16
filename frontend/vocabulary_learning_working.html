@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP English Learning - Vocabulary Learning</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .language-selector {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .language-btn {
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        
+        .language-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .language-btn.active {
+            background: linear-gradient(45deg, #4F46E5, #7C3AED);
+            box-shadow: 0 10px 20px rgba(79, 70, 229, 0.4);
+            transform: translateY(-3px);
+        }
+        
+        .language-flag {
+            font-size: 1.2rem;
+            margin-right: 8px;
+        }
+        
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .topic-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .topic-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .topic-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .topic-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .topic-description {
+            opacity: 0.8;
+            margin-bottom: 15px;
+        }
+        
+        .topic-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .topic-level {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+        
+        .topic-count {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        .loading {
+            text-align: center;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+        
+        .error {
+            text-align: center;
+            color: #ff6b6b;
+            font-size: 1.2rem;
+        }
+        
+        .api-status {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2rem; }
+            .language-selector { flex-direction: column; align-items: center; }
+            .topics-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 VIP English Learning</h1>
+            <p>Chọn ngôn ngữ và chủ đề để bắt đầu học từ vựng</p>
+        </div>
+
+        <div id="api-status" class="api-status">
+            🔄 Đang kiểm tra kết nối API...
+        </div>
+
+        <div class="language-selector">
+            <button class="language-btn active" data-language="en" onclick="selectLanguage('en')">
+                <span class="language-flag">🇺🇸</span>
+                English
+            </button>
+            <button class="language-btn" data-language="zh" onclick="selectLanguage('zh')">
+                <span class="language-flag">🇨🇳</span>
+                中文
+            </button>
+            <button class="language-btn" data-language="ko" onclick="selectLanguage('ko')">
+                <span class="language-flag">🇰🇷</span>
+                한국어
+            </button>
+            <button class="language-btn" data-language="ja" onclick="selectLanguage('ja')">
+                <span class="language-flag">🇯🇵</span>
+                日本語
+            </button>
+            <button class="language-btn" data-language="th" onclick="selectLanguage('th')">
+                <span class="language-flag">🇹🇭</span>
+                ไทย
+            </button>
+        </div>
+
+        <div id="loading" class="loading">
+            Đang tải từ vựng...
+        </div>
+
+        <div id="topics-grid" class="topics-grid" style="display: none;">
+            <!-- Topics will be loaded here -->
+        </div>
+
+        <div id="error" class="error" style="display: none;">
+            <!-- Error messages will be shown here -->
+        </div>
+    </div>
+
+    <script>
+        let currentLanguage = 'en';
+        
+        // Sample data for different languages
+        const sampleTopicsByLanguage = {
+            en: [
+                { TopicID: 1, Title: 'Family', Description: 'Gia đình và các mối quan hệ', Level: 'A1', Icon: '👨‍👩‍👧‍👦', VocabularyCount: 4 },
+                { TopicID: 2, Title: 'Food', Description: 'Thức ăn và đồ uống', Level: 'A1', Icon: '🍕', VocabularyCount: 4 },
+                { TopicID: 3, Title: 'Home', Description: 'Nhà cửa và đồ đạc', Level: 'A1', Icon: '🏠', VocabularyCount: 0 },
+                { TopicID: 4, Title: 'Colors', Description: 'Màu sắc và hình dạng', Level: 'A1', Icon: '🎨', VocabularyCount: 0 },
+                { TopicID: 5, Title: 'Numbers', Description: 'Số đếm và thời gian', Level: 'A1', Icon: '🔢', VocabularyCount: 0 },
+                { TopicID: 6, Title: 'Animals', Description: 'Động vật và thiên nhiên', Level: 'A1', Icon: '🐶', VocabularyCount: 0 },
+                { TopicID: 7, Title: 'Travel', Description: 'Du lịch và phương tiện', Level: 'A2', Icon: '✈️', VocabularyCount: 4 },
+                { TopicID: 8, Title: 'Work', Description: 'Công việc và nghề nghiệp', Level: 'B1', Icon: '💼', VocabularyCount: 0 }
+            ],
+            zh: [
+                { TopicID: 1, Title: '家庭', Description: 'Gia đình và các mối quan hệ', Level: 'A1', Icon: '👨‍👩‍👧‍👦', VocabularyCount: 4 },
+                { TopicID: 2, Title: '食物', Description: 'Thức ăn và đồ uống', Level: 'A1', Icon: '🍕', VocabularyCount: 4 },
+                { TopicID: 3, Title: '家', Description: 'Nhà cửa và đồ đạc', Level: 'A1', Icon: '🏠', VocabularyCount: 0 },
+                { TopicID: 4, Title: '颜色', Description: 'Màu sắc và hình dạng', Level: 'A1', Icon: '🎨', VocabularyCount: 0 },
+                { TopicID: 5, Title: '数字', Description: 'Số đếm và thời gian', Level: 'A1', Icon: '🔢', VocabularyCount: 0 },
+                { TopicID: 6, Title: '动物', Description: 'Động vật và thiên nhiên', Level: 'A1', Icon: '🐶', VocabularyCount: 0 },
+                { TopicID: 7, Title: '旅行', Description: 'Du lịch và phương tiện', Level: 'A2', Icon: '✈️', VocabularyCount: 4 },
+                { TopicID: 8, Title: '工作', Description: 'Công việc và nghề nghiệp', Level: 'B1', Icon: '💼', VocabularyCount: 0 }
+            ],
+            ko: [
+                { TopicID: 1, Title: '가족', Description: 'Gia đình và các mối quan hệ', Level: 'A1', Icon: '👨‍👩‍👧‍👦', VocabularyCount: 4 },
+                { TopicID: 2, Title: '음식', Description: 'Thức ăn và đồ uống', Level: 'A1', Icon: '🍕', VocabularyCount: 4 },
+                { TopicID: 3, Title: '집', Description: 'Nhà cửa và đồ đạc', Level: 'A1', Icon: '🏠', VocabularyCount: 0 },
+                { TopicID: 4, Title: '색깔', Description: 'Màu sắc và hình dạng', Level: 'A1', Icon: '🎨', VocabularyCount: 0 },
+                { TopicID: 5, Title: '숫자', Description: 'Số đếm và thời gian', Level: 'A1', Icon: '🔢', VocabularyCount: 0 },
+                { TopicID: 6, Title: '동물', Description: 'Động vật và thiên nhiên', Level: 'A1', Icon: '🐶', VocabularyCount: 0 },
+                { TopicID: 7, Title: '여행', Description: 'Du lịch và phương tiện', Level: 'A2', Icon: '✈️', VocabularyCount: 4 },
+                { TopicID: 8, Title: '직업', Description: 'Công việc và nghề nghiệp', Level: 'B1', Icon: '💼', VocabularyCount: 0 }
+            ],
+            ja: [
+                { TopicID: 1, Title: '家族', Description: 'Gia đình và các mối quan hệ', Level: 'A1', Icon: '👨‍👩‍👧‍👦', VocabularyCount: 4 },
+                { TopicID: 2, Title: '食べ物', Description: 'Thức ăn và đồ uống', Level: 'A1', Icon: '🍕', VocabularyCount: 4 },
+                { TopicID: 3, Title: '家', Description: 'Nhà cửa và đồ đạc', Level: 'A1', Icon: '🏠', VocabularyCount: 0 },
+                { TopicID: 4, Title: '色', Description: 'Màu sắc và hình dạng', Level: 'A1', Icon: '🎨', VocabularyCount: 0 },
+                { TopicID: 5, Title: '数字', Description: 'Số đếm và thời gian', Level: 'A1', Icon: '🔢', VocabularyCount: 0 },
+                { TopicID: 6, Title: '動物', Description: 'Động vật và thiên nhiên', Level: 'A1', Icon: '🐶', VocabularyCount: 0 },
+                { TopicID: 7, Title: '旅行', Description: 'Du lịch và phương tiện', Level: 'A2', Icon: '✈️', VocabularyCount: 4 },
+                { TopicID: 8, Title: '仕事', Description: 'Công việc và nghề nghiệp', Level: 'B1', Icon: '💼', VocabularyCount: 0 }
+            ],
+            th: [
+                { TopicID: 1, Title: 'ครอบครัว', Description: 'Gia đình và các mối quan hệ', Level: 'A1', Icon: '👨‍👩‍👧‍👦', VocabularyCount: 4 },
+                { TopicID: 2, Title: 'อาหาร', Description: 'Thức ăn và đồ uống', Level: 'A1', Icon: '🍕', VocabularyCount: 4 },
+                { TopicID: 3, Title: 'บ้าน', Description: 'Nhà cửa và đồ đạc', Level: 'A1', Icon: '🏠', VocabularyCount: 0 },
+                { TopicID: 4, Title: 'สี', Description: 'Màu sắc và hình dạng', Level: 'A1', Icon: '🎨', VocabularyCount: 0 },
+                { TopicID: 5, Title: 'ตัวเลข', Description: 'Số đếm và thời gian', Level: 'A1', Icon: '🔢', VocabularyCount: 0 },
+                { TopicID: 6, Title: 'สัตว์', Description: 'Động vật và thiên nhiên', Level: 'A1', Icon: '🐶', VocabularyCount: 0 },
+                { TopicID: 7, Title: 'การเดินทาง', Description: 'Du lịch và phương tiện', Level: 'A2', Icon: '✈️', VocabularyCount: 4 },
+                { TopicID: 8, Title: 'งาน', Description: 'Công việc và nghề nghiệp', Level: 'B1', Icon: '💼', VocabularyCount: 0 }
+            ]
+        };
+
+        // Test API connection
+        async function testAPI() {
+            try {
+                const response = await fetch('http://localhost:8000/api/test');
+                if (response.ok) {
+                    const result = await response.json();
+                    document.getElementById('api-status').innerHTML = '✅ API Backend: Kết nối thành công!';
+                } else {
+                    throw new Error('API không phản hồi');
+                }
+            } catch (error) {
+                document.getElementById('api-status').innerHTML = '❌ API Backend: Không kết nối được - Sử dụng dữ liệu mẫu';
+            }
+        }
+
+        // Select language
+        function selectLanguage(language) {
+            currentLanguage = language;
+            
+            // Update active button
+            document.querySelectorAll('.language-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`[data-language="${language}"]`).classList.add('active');
+            
+            // Load topics for selected language
+            loadTopics();
+        }
+
+        // Load topics
+        async function loadTopics() {
+            try {
+                const response = await fetch(`http://localhost:8000/api/topics?languageId=${getLanguageId(currentLanguage)}`);
+                if (response.ok) {
+                    const result = await response.json();
+                    if (result.success) {
+                        displayTopics(result.data);
+                    } else {
+                        throw new Error(result.message || 'API error');
+                    }
+                } else {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+            } catch (error) {
+                console.error('Failed to fetch topics:', error);
+                displayTopics(sampleTopicsByLanguage[currentLanguage]);
+                showError('Sử dụng dữ liệu mẫu: ' + error.message);
+            }
+        }
+
+        // Get language ID for API
+        function getLanguageId(language) {
+            const languageMap = {
+                'en': 1, // English
+                'zh': 2, // Chinese
+                'ko': 3, // Korean
+                'ja': 4, // Japanese
+                'th': 5  // Thai
+            };
+            return languageMap[language] || 1;
+        }
+
+        function displayTopics(topics) {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('error').style.display = 'none';
+            const grid = document.getElementById('topics-grid');
+            grid.style.display = 'grid';
+            
+            grid.innerHTML = topics.map(topic => `
+                <div class="topic-card" onclick="selectTopic(${topic.TopicID})">
+                    <div class="topic-icon">${topic.Icon}</div>
+                    <div class="topic-title">${topic.Title}</div>
+                    <div class="topic-description">${topic.Description}</div>
+                    <div class="topic-info">
+                        <span class="topic-level">${topic.Level}</span>
+                        <span class="topic-count">${topic.VocabularyCount || 0} từ vựng</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function showError(message) {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('topics-grid').style.display = 'none';
+            const errorDiv = document.getElementById('error');
+            errorDiv.style.display = 'block';
+            errorDiv.textContent = message;
+        }
+
+        function selectTopic(topicId) {
+            alert(`🎉 Đã chọn topic ${topicId} cho ngôn ngữ ${currentLanguage}!\n\nTính năng học từ vựng chi tiết sẽ được phát triển tiếp theo với:\n- Flashcards\n- Writing Practice\n- Spaced Repetition\n- Audio Pronunciation`);
+        }
+
+        // Load topics on page load
+        window.addEventListener('load', () => {
+            testAPI();
+            loadTopics();
+        });
+    </script>
+</body>
+</html>

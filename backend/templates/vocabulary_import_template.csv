@@ -1,0 +1,13 @@
+Word,Phonetic,Type,Meaning,Example,Audio,TopicID,LanguageID,Difficulty
+bố,bo,Noun,Father,Bố tôi là bác sĩ.,/audio/vi/father.mp3,1,1,Easy
+mẹ,me,Noun,Mother,Mẹ tôi nấu ăn rất ngon.,/audio/vi/mother.mp3,1,1,Easy
+anh trai,anh trai,Noun,Brother,Anh trai tôi rất cao.,/audio/vi/brother.mp3,1,1,Easy
+chị gái,chi gai,Noun,Sister,Chị gái tôi rất xinh.,/audio/vi/sister.mp3,1,1,Easy
+cơm,com,Noun,Rice,Tôi ăn cơm mỗi ngày.,/audio/vi/rice.mp3,2,1,Easy
+bánh mì,banh mi,Noun,Bread,Tôi thích bánh mì cho bữa sáng.,/audio/vi/bread.mp3,2,1,Easy
+nước,nuoc,Noun,Water,Tôi uống nước mỗi ngày.,/audio/vi/water.mp3,2,1,Easy
+cà phê,ca phe,Noun,Coffee,Tôi uống cà phê vào buổi sáng.,/audio/vi/coffee.mp3,2,1,Easy
+father,/ˈfɑːðər/,Noun,Bố cha,My father is a doctor.,/audio/en/father.mp3,6,2,Easy
+mother,/ˈmʌðər/,Noun,Mẹ má,My mother cooks well.,/audio/en/mother.mp3,6,2,Easy
+brother,/ˈbrʌðər/,Noun,Anh em trai,My brother is tall.,/audio/en/brother.mp3,6,2,Easy
+sister,/ˈsɪstər/,Noun,Chị em gái,My sister is beautiful.,/audio/en/sister.mp3,6,2,Easy

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP English Learning - Vocabulary</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .header { text-align: center; margin-bottom: 40px; }
+        .header h1 { font-size: 3rem; margin-bottom: 10px; }
+        .header p { font-size: 1.2rem; opacity: 0.8; }
+        .topics-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 20px; 
+            margin-bottom: 40px;
+        }
+        .topic-card { 
+            background: rgba(255, 255, 255, 0.1); 
+            backdrop-filter: blur(10px);
+            border-radius: 15px; 
+            padding: 30px; 
+            text-align: center; 
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .topic-card:hover { 
+            transform: translateY(-10px); 
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .topic-icon { font-size: 4rem; margin-bottom: 15px; }
+        .topic-title { font-size: 1.5rem; font-weight: bold; margin-bottom: 10px; }
+        .topic-desc { opacity: 0.8; margin-bottom: 15px; }
+        .topic-level { 
+            display: inline-block; 
+            background: rgba(255, 255, 255, 0.2); 
+            padding: 5px 15px; 
+            border-radius: 20px; 
+            font-size: 0.9rem;
+        }
+        .loading { text-align: center; font-size: 1.5rem; margin: 50px 0; }
+        .error { 
+            background: rgba(255, 0, 0, 0.2); 
+            border: 1px solid rgba(255, 0, 0, 0.5); 
+            padding: 20px; 
+            border-radius: 10px; 
+            margin: 20px 0;
+        }
+        .vocabulary-section { display: none; }
+        .vocabulary-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 20px; 
+            margin: 20px 0;
+        }
+        .vocab-card { 
+            background: rgba(255, 255, 255, 0.1); 
+            backdrop-filter: blur(10px);
+            border-radius: 10px; 
+            padding: 20px; 
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .vocab-word { font-size: 1.3rem; font-weight: bold; margin-bottom: 5px; }
+        .vocab-phonetic { opacity: 0.7; font-style: italic; margin-bottom: 10px; }
+        .vocab-meaning { margin-bottom: 10px; }
+        .vocab-example { opacity: 0.8; font-size: 0.9rem; }
+        .back-btn { 
+            background: rgba(255, 255, 255, 0.2); 
+            border: none; 
+            color: white; 
+            padding: 10px 20px; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            margin-bottom: 20px;
+        }
+        .study-methods { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 20px; 
+            margin: 30px 0;
+        }
+        .method-card { 
+            background: rgba(255, 255, 255, 0.1); 
+            backdrop-filter: blur(10px);
+            border-radius: 10px; 
+            padding: 20px; 
+            text-align: center; 
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .method-card:hover { 
+            transform: translateY(-5px); 
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .method-icon { font-size: 2rem; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 VIP English Learning</h1>
+            <p>Chọn chủ đề để bắt đầu học từ vựng</p>
+        </div>
+
+        <div id="loading" class="loading">
+            Đang tải từ vựng...
+        </div>
+
+        <div id="error" class="error" style="display: none;"></div>
+
+        <div id="topics-section">
+            <div id="topics-grid" class="topics-grid"></div>
+        </div>
+
+        <div id="vocabulary-section" class="vocabulary-section">
+            <button id="back-btn" class="back-btn">← Quay lại</button>
+            <div id="topic-header"></div>
+            
+            <div class="study-methods">
+                <div class="method-card" onclick="startStudy('flashcard')">
+                    <div class="method-icon">🃏</div>
+                    <h3>Flashcard</h3>
+                    <p>Học với thẻ từ vựng và âm thanh</p>
+                </div>
+                <div class="method-card" onclick="startStudy('writing')">
+                    <div class="method-icon">✍️</div>
+                    <h3>Luyện viết</h3>
+                    <p>Luyện viết để cải thiện chính tả</p>
+                </div>
+                <div class="method-card" onclick="startStudy('spaced')">
+                    <div class="method-icon">🔄</div>
+                    <h3>Lặp lại ngắt quãng</h3>
+                    <p>Học với thuật toán SM-2</p>
+                </div>
+            </div>
+
+            <div id="vocabulary-grid" class="vocabulary-grid"></div>
+        </div>
+    </div>
+
+    <script>
+        // Sample data
+        const sampleTopics = [
+            { TopicID: 1, Title: 'Family', Description: 'Gia đình và các mối quan hệ', Level: 'A1', Icon: '👨‍👩‍👧‍👦', VocabularyCount: 4 },
+            { TopicID: 2, Title: 'Food', Description: 'Thức ăn và đồ uống', Level: 'A1', Icon: '🍕', VocabularyCount: 4 },
+            { TopicID: 3, Title: 'Home', Description: 'Nhà cửa và đồ đạc', Level: 'A1', Icon: '🏠', VocabularyCount: 0 },
+            { TopicID: 4, Title: 'Colors', Description: 'Màu sắc và hình dạng', Level: 'A1', Icon: '🎨', VocabularyCount: 0 },
+            { TopicID: 5, Title: 'Numbers', Description: 'Số đếm và thời gian', Level: 'A1', Icon: '🔢', VocabularyCount: 0 },
+            { TopicID: 6, Title: 'Animals', Description: 'Động vật và thiên nhiên', Level: 'A1', Icon: '🐶', VocabularyCount: 0 },
+            { TopicID: 7, Title: 'Travel', Description: 'Du lịch và phương tiện', Level: 'A2', Icon: '✈️', VocabularyCount: 4 },
+            { TopicID: 8, Title: 'Work', Description: 'Công việc và nghề nghiệp', Level: 'B1', Icon: '💼', VocabularyCount: 0 }
+        ];
+
+        const sampleVocabulary = {
+            1: [ // Family
+                { WordID: 1, Word: 'father', Phonetic: '/ˈfɑːðər/', Type: 'Noun', Meaning: 'Bố, cha', Example: 'My father is a doctor.' },
+                { WordID: 2, Word: 'mother', Phonetic: '/ˈmʌðər/', Type: 'Noun', Meaning: 'Mẹ, má', Example: 'My mother cooks well.' },
+                { WordID: 3, Word: 'brother', Phonetic: '/ˈbrʌðər/', Type: 'Noun', Meaning: 'Anh/em trai', Example: 'My brother is tall.' },
+                { WordID: 4, Word: 'sister', Phonetic: '/ˈsɪstər/', Type: 'Noun', Meaning: 'Chị/em gái', Example: 'My sister is beautiful.' }
+            ],
+            2: [ // Food
+                { WordID: 5, Word: 'rice', Phonetic: '/raɪs/', Type: 'Noun', Meaning: 'Cơm', Example: 'I eat rice every day.' },
+                { WordID: 6, Word: 'bread', Phonetic: '/bred/', Type: 'Noun', Meaning: 'Bánh mì', Example: 'I like bread for breakfast.' },
+                { WordID: 7, Word: 'water', Phonetic: '/ˈwɔːtər/', Type: 'Noun', Meaning: 'Nước', Example: 'I drink water every day.' },
+                { WordID: 8, Word: 'coffee', Phonetic: '/ˈkɔːfi/', Type: 'Noun', Meaning: 'Cà phê', Example: 'I drink coffee in the morning.' }
+            ],
+            7: [ // Travel
+                { WordID: 9, Word: 'car', Phonetic: '/kɑːr/', Type: 'Noun', Meaning: 'Xe ô tô', Example: 'I drive a car to work.' },
+                { WordID: 10, Word: 'plane', Phonetic: '/pleɪn/', Type: 'Noun', Meaning: 'Máy bay', Example: 'I travel by plane.' },
+                { WordID: 11, Word: 'hotel', Phonetic: '/hoʊˈtel/', Type: 'Noun', Meaning: 'Khách sạn', Example: 'I stay at a hotel.' },
+                { WordID: 12, Word: 'passport', Phonetic: '/ˈpæspɔːrt/', Type: 'Noun', Meaning: 'Hộ chiếu', Example: 'I need a passport to travel.' }
+            ]
+        };
+
+        let currentTopic = null;
+
+        // Load topics
+        async function loadTopics() {
+            try {
+                const response = await fetch('http://localhost:8000/api/topics');
+                if (response.ok) {
+                    const result = await response.json();
+                    if (result.success) {
+                        displayTopics(result.data);
+                    } else {
+                        throw new Error(result.message || 'API error');
+                    }
+                } else {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+            } catch (error) {
+                console.error('Failed to fetch topics:', error);
+                displayTopics(sampleTopics);
+                showError('Using sample data: ' + error.message);
+            }
+        }
+
+        function displayTopics(topics) {
+            document.getElementById('loading').style.display = 'none';
+            const grid = document.getElementById('topics-grid');
+            
+            topics.forEach(topic => {
+                const card = document.createElement('div');
+                card.className = 'topic-card';
+                card.onclick = () => selectTopic(topic);
+                card.innerHTML = `
+                    <div class="topic-icon">${topic.Icon}</div>
+                    <div class="topic-title">${topic.Title}</div>
+                    <div class="topic-desc">${topic.Description}</div>
+                    <div class="topic-level">${topic.Level}</div>
+                    <div style="margin-top: 10px; opacity: 0.7;">${topic.VocabularyCount || 0} từ vựng</div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function selectTopic(topic) {
+            currentTopic = topic;
+            document.getElementById('topics-section').style.display = 'none';
+            document.getElementById('vocabulary-section').style.display = 'block';
+            
+            document.getElementById('topic-header').innerHTML = `
+                <h2>${topic.Icon} ${topic.Title}</h2>
+                <p>${topic.Description} • ${topic.VocabularyCount || 0} từ vựng</p>
+            `;
+            
+            loadVocabulary(topic.TopicID);
+        }
+
+        async function loadVocabulary(topicId) {
+            try {
+                const response = await fetch(`http://localhost:8000/api/vocabulary?topicId=${topicId}`);
+                if (response.ok) {
+                    const result = await response.json();
+                    if (result.success) {
+                        displayVocabulary(result.data);
+                    } else {
+                        throw new Error(result.message || 'API error');
+                    }
+                } else {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+            } catch (error) {
+                console.error('Failed to fetch vocabulary:', error);
+                displayVocabulary(sampleVocabulary[topicId] || []);
+                showError('Using sample data: ' + error.message);
+            }
+        }
+
+        function displayVocabulary(vocabulary) {
+            const grid = document.getElementById('vocabulary-grid');
+            grid.innerHTML = '';
+            
+            vocabulary.forEach(vocab => {
+                const card = document.createElement('div');
+                card.className = 'vocab-card';
+                card.innerHTML = `
+                    <div class="vocab-word">${vocab.Word}</div>
+                    <div class="vocab-phonetic">${vocab.Phonetic}</div>
+                    <div class="vocab-meaning">${vocab.Meaning}</div>
+                    <div class="vocab-example">"${vocab.Example}"</div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function startStudy(method) {
+            alert(`Bắt đầu học với phương pháp: ${method}`);
+        }
+
+        function showError(message) {
+            const errorDiv = document.getElementById('error');
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+        }
+
+        // Back button
+        document.getElementById('back-btn').onclick = () => {
+            document.getElementById('vocabulary-section').style.display = 'none';
+            document.getElementById('topics-section').style.display = 'block';
+            currentTopic = null;
+        };
+
+        // Load topics on page load
+        loadTopics();
+    </script>
+</body>
+</html>

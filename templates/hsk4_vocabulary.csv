@@ -1,0 +1,98 @@
+Word,Phonetic,Type,Meaning,Example,Audio,TopicID,LanguageID,Difficulty
+全球化,quánqiúhuà,noun,globalization,全球化趋势,globalization.mp3,4,3,Expert
+国际化,guójìhuà,noun,internationalization,国际化发展,internationalization.mp3,4,3,Expert
+现代化,xiàndàihuà,noun,modernization,现代化进程,modernization.mp3,4,3,Expert
+信息化,xìnxīhuà,noun,informatization,信息化建设,informatization.mp3,4,3,Expert
+数字化,shùzìhuà,noun,digitalization,数字化转型,digitalization.mp3,4,3,Expert
+智能化,zhìnéng huà,noun,intellectualization,智能化发展,intellectualization.mp3,4,3,Expert
+自动化,zìdònghuà,noun,automation,自动化生产,automation.mp3,4,3,Expert
+标准化,biāozhǔnhuà,noun,standardization,标准化管理,standardization.mp3,4,3,Expert
+规范化,guīfànhuà,noun,normalization,规范化操作,normalization.mp3,4,3,Expert
+制度化,zhìdùhuà,noun,institutionalization,制度化建设,institutionalization.mp3,4,3,Expert
+法制化,fǎzhìhuà,noun,legalization,法制化进程,legalization.mp3,4,3,Expert
+民主化,mínzhǔhuà,noun,democratization,民主化改革,democratization.mp3,4,3,Expert
+市场化,shìchǎnghuà,noun,marketization,市场化改革,marketization.mp3,4,3,Expert
+产业化,chǎnyèhuà,noun,industrialization,产业化发展,industrialization.mp3,4,3,Expert
+城市化,chéngshìhuà,noun,urbanization,城市化进程,urbanization.mp3,4,3,Expert
+一体化,yītǐhuà,noun,integration,一体化发展,integration.mp3,4,3,Expert
+多元化,duōyuánhuà,noun,diversification,多元化发展,diversification.mp3,4,3,Expert
+专业化,zhuānyèhuà,noun,specialization,专业化发展,specialization.mp3,4,3,Expert
+规模化,guīmóhuà,noun,scaling,规模化发展,scaling.mp3,4,3,Expert
+集约化,jíyuēhuà,noun,intensification,集约化发展,intensification.mp3,4,3,Expert
+可持续发展,kěchíxùfāzhǎn,noun,sustainable development,可持续发展战略,sustainable_development.mp3,4,3,Expert
+绿色发展,lǜsèfāzhǎn,noun,green development,绿色发展理念,green_development.mp3,4,3,Expert
+创新发展,chuàngxīnfāzhǎn,noun,innovative development,创新发展模式,innovative_development.mp3,4,3,Expert
+协调发展,xiétiáofāzhǎn,noun,coordinated development,协调发展机制,coordinated_development.mp3,4,3,Expert
+开放发展,kāifàngfāzhǎn,noun,open development,开放发展格局,open_development.mp3,4,3,Expert
+共享发展,gòngxiǎngfāzhǎn,noun,shared development,共享发展理念,shared_development.mp3,4,3,Expert
+高质量发展,gāozhìliàngfāzhǎn,noun,high-quality development,高质量发展要求,high_quality_development.mp3,4,3,Expert
+供给侧结构性改革,gōngjícèjiégòuxìnggǎigé,noun,supply-side structural reform,供给侧结构性改革措施,supply_side_structural_reform.mp3,4,3,Expert
+需求侧管理,xūqiúcèguǎnlǐ,noun,demand-side management,需求侧管理政策,demand_side_management.mp3,4,3,Expert
+供给侧管理,gōngjícèguǎnlǐ,noun,supply-side management,供给侧管理措施,supply_side_management.mp3,4,3,Expert
+供给侧改革,gōngjícègǎigé,noun,supply-side reform,供给侧改革措施,supply_side_reform.mp3,4,3,Expert
+需求侧改革,xūqiúcègǎigé,noun,demand-side reform,需求侧改革措施,demand_side_reform.mp3,4,3,Expert
+结构性改革,jiégòuxìnggǎigé,noun,structural reform,结构性改革措施,structural_reform.mp3,4,3,Expert
+制度性改革,zhìdùxìnggǎigé,noun,institutional reform,制度性改革措施,institutional_reform.mp3,4,3,Expert
+体制性改革,tǐzhìxìnggǎigé,noun,systemic reform,体制性改革措施,systemic_reform.mp3,4,3,Expert
+机制性改革,jīzhìxìnggǎigé,noun,mechanism reform,机制性改革措施,mechanism_reform.mp3,4,3,Expert
+政策性改革,zhèngcèxìnggǎigé,noun,policy reform,政策性改革措施,policy_reform.mp3,4,3,Expert
+技术性改革,jìshùxìnggǎigé,noun,technical reform,技术性改革措施,technical_reform.mp3,4,3,Expert
+管理性改革,guǎnlǐxìnggǎigé,noun,management reform,管理性改革措施,management_reform.mp3,4,3,Expert
+服务性改革,fúwùxìnggǎigé,noun,service reform,服务性改革措施,service_reform.mp3,4,3,Expert
+创新性改革,chuàngxīnxìnggǎigé,noun,innovative reform,创新性改革措施,innovative_reform.mp3,4,3,Expert
+改革性创新,gǎigéxìngchuàngxīn,noun,reform innovation,改革性创新措施,reform_innovation.mp3,4,3,Expert
+创新性发展,chuàngxīnxìngfāzhǎn,noun,innovative development,创新性发展模式,innovative_development.mp3,4,3,Expert
+发展性创新,fāzhǎnxìngchuàngxīn,noun,developmental innovation,发展性创新措施,developmental_innovation.mp3,4,3,Expert
+战略性创新,zhànlüèxìngchuàngxīn,noun,strategic innovation,战略性创新措施,strategic_innovation.mp3,4,3,Expert
+战术性创新,zhànshùxìngchuàngxīn,noun,tactical innovation,战术性创新措施,tactical_innovation.mp3,4,3,Expert
+技术性创新,jìshùxìngchuàngxīn,noun,technical innovation,技术性创新措施,technical_innovation.mp3,4,3,Expert
+管理性创新,guǎnlǐxìngchuàngxīn,noun,management innovation,管理性创新措施,management_innovation.mp3,4,3,Expert
+服务性创新,fúwùxìngchuàngxīn,noun,service innovation,服务性创新措施,service_innovation.mp3,4,3,Expert
+制度性创新,zhìdùxìngchuàngxīn,noun,institutional innovation,制度性创新措施,institutional_innovation.mp3,4,3,Expert
+体制性创新,tǐzhìxìngchuàngxīn,noun,systemic innovation,体制性创新措施,systemic_innovation.mp3,4,3,Expert
+机制性创新,jīzhìxìngchuàngxīn,noun,mechanism innovation,机制性创新措施,mechanism_innovation.mp3,4,3,Expert
+政策性创新,zhèngcèxìngchuàngxīn,noun,policy innovation,政策性创新措施,policy_innovation.mp3,4,3,Expert
+理论性创新,lǐlùnxìngchuàngxīn,noun,theoretical innovation,理论性创新措施,theoretical_innovation.mp3,4,3,Expert
+实践性创新,shíjiànxìngchuàngxīn,noun,practical innovation,实践性创新措施,practical_innovation.mp3,4,3,Expert
+应用性创新,yìngyòngxìngchuàngxīn,noun,applied innovation,应用性创新措施,applied_innovation.mp3,4,3,Expert
+基础性创新,jīchǔxìngchuàngxīn,noun,basic innovation,基础性创新措施,basic_innovation.mp3,4,3,Expert
+前沿性创新,qiányánxìngchuàngxīn,noun,cutting-edge innovation,前沿性创新措施,cutting_edge_innovation.mp3,4,3,Expert
+颠覆性创新,diānfùxìngchuàngxīn,noun,disruptive innovation,颠覆性创新措施,disruptive_innovation.mp3,4,3,Expert
+渐进性创新,jiànjìnxìngchuàngxīn,noun,incremental innovation,渐进性创新措施,incremental_innovation.mp3,4,3,Expert
+突破性创新,tūpòxìngchuàngxīn,noun,breakthrough innovation,突破性创新措施,breakthrough_innovation.mp3,4,3,Expert
+原创性创新,yuánchuàngxìngchuàngxīn,noun,original innovation,原创性创新措施,original_innovation.mp3,4,3,Expert
+集成性创新,jíchéngxìngchuàngxīn,noun,integrated innovation,集成性创新措施,integrated_innovation.mp3,4,3,Expert
+协同性创新,xiétóngxìngchuàngxīn,noun,collaborative innovation,协同性创新措施,collaborative_innovation.mp3,4,3,Expert
+开放性创新,kāifàngxìngchuàngxīn,noun,open innovation,开放性创新措施,open_innovation.mp3,4,3,Expert
+共享性创新,gòngxiǎngxìngchuàngxīn,noun,shared innovation,共享性创新措施,shared_innovation.mp3,4,3,Expert
+包容性创新,bāoróngxìngchuàngxīn,noun,inclusive innovation,包容性创新措施,inclusive_innovation.mp3,4,3,Expert
+可持续性创新,kěchíxùxìngchuàngxīn,noun,sustainable innovation,可持续性创新措施,sustainable_innovation.mp3,4,3,Expert
+绿色性创新,lǜsèxìngchuàngxīn,noun,green innovation,绿色性创新措施,green_innovation.mp3,4,3,Expert
+智能性创新,zhìnéngxìngchuàngxīn,noun,intelligent innovation,智能性创新措施,intelligent_innovation.mp3,4,3,Expert
+数字化创新,shùzìhuàchuàngxīn,noun,digital innovation,数字化创新措施,digital_innovation.mp3,4,3,Expert
+网络化创新,wǎngluòhuàchuàngxīn,noun,network innovation,网络化创新措施,network_innovation.mp3,4,3,Expert
+信息化创新,xìnxīhuàchuàngxīn,noun,information innovation,信息化创新措施,information_innovation.mp3,4,3,Expert
+科技化创新,kējìhuàchuàngxīn,noun,technological innovation,科技化创新措施,technological_innovation.mp3,4,3,Expert
+产业化创新,chǎnyèhuàchuàngxīn,noun,industrial innovation,产业化创新措施,industrial_innovation.mp3,4,3,Expert
+商业化创新,shāngyèhuàchuàngxīn,noun,commercial innovation,商业化创新措施,commercial_innovation.mp3,4,3,Expert
+市场化创新,shìchǎnghuàchuàngxīn,noun,market innovation,市场化创新措施,market_innovation.mp3,4,3,Expert
+国际化创新,guójìhuàchuàngxīn,noun,international innovation,国际化创新措施,international_innovation.mp3,4,3,Expert
+全球化创新,quánqiúhuàchuàngxīn,noun,global innovation,全球化创新措施,global_innovation.mp3,4,3,Expert
+区域化创新,qūyùhuàchuàngxīn,noun,regional innovation,区域化创新措施,regional_innovation.mp3,4,3,Expert
+本地化创新,běndìhuàchuàngxīn,noun,local innovation,本地化创新措施,local_innovation.mp3,4,3,Expert
+个性化创新,gèxìnghuàchuàngxīn,noun,personalized innovation,个性化创新措施,personalized_innovation.mp3,4,3,Expert
+定制化创新,dìngzhìhuàchuàngxīn,noun,customized innovation,定制化创新措施,customized_innovation.mp3,4,3,Expert
+模块化创新,mókuàihuàchuàngxīn,noun,modular innovation,模块化创新措施,modular_innovation.mp3,4,3,Expert
+标准化创新,biāozhǔnhuàchuàngxīn,noun,standardized innovation,标准化创新措施,standardized_innovation.mp3,4,3,Expert
+规范化创新,guīfànhuàchuàngxīn,noun,normalized innovation,规范化创新措施,normalized_innovation.mp3,4,3,Expert
+制度化创新,zhìdùhuàchuàngxīn,noun,institutionalized innovation,制度化创新措施,institutionalized_innovation.mp3,4,3,Expert
+法制化创新,fǎzhìhuàchuàngxīn,noun,legalized innovation,法制化创新措施,legalized_innovation.mp3,4,3,Expert
+民主化创新,mínzhǔhuàchuàngxīn,noun,democratized innovation,民主化创新措施,democratized_innovation.mp3,4,3,Expert
+市场化创新,shìchǎnghuàchuàngxīn,noun,marketized innovation,市场化创新措施,marketized_innovation.mp3,4,3,Expert
+产业化创新,chǎnyèhuàchuàngxīn,noun,industrialized innovation,产业化创新措施,industrialized_innovation.mp3,4,3,Expert
+城市化创新,chéngshìhuàchuàngxīn,noun,urbanized innovation,城市化创新措施,urbanized_innovation.mp3,4,3,Expert
+一体化创新,yītǐhuàchuàngxīn,noun,integrated innovation,一体化创新措施,integrated_innovation.mp3,4,3,Expert
+多元化创新,duōyuánhuàchuàngxīn,noun,diversified innovation,多元化创新措施,diversified_innovation.mp3,4,3,Expert
+专业化创新,zhuānyèhuàchuàngxīn,noun,specialized innovation,专业化创新措施,specialized_innovation.mp3,4,3,Expert
+规模化创新,guīmóhuàchuàngxīn,noun,scaled innovation,规模化创新措施,scaled_innovation.mp3,4,3,Expert
+集约化创新,jíyuēhuàchuàngxīn,noun,intensified innovation,集约化创新措施,intensified_innovation.mp3,4,3,Expert

@@ -1,0 +1,110 @@
+Word,Phonetic,Type,Meaning,Example,Audio,TopicID,LanguageID,Difficulty
+人工智能,réngōngzhìnéng,noun,artificial intelligence,人工智能技术,artificial_intelligence.mp3,5,3,Master
+机器学习,jīqìxuéxí,noun,machine learning,机器学习算法,machine_learning.mp3,5,3,Master
+深度学习,shēndùxuéxí,noun,deep learning,深度学习模型,deep_learning.mp3,5,3,Master
+神经网络,shénjīngwǎngluò,noun,neural network,神经网络架构,neural_network.mp3,5,3,Master
+大数据,dàshùjù,noun,big data,大数据分析,big_data.mp3,5,3,Master
+云计算,yúnjìsuàn,noun,cloud computing,云计算服务,cloud_computing.mp3,5,3,Master
+物联网,wùliánwǎng,noun,internet of things,物联网应用,internet_of_things.mp3,5,3,Master
+区块链,qūkuàiliàn,noun,blockchain,区块链技术,blockchain.mp3,5,3,Master
+量子计算,liàngzǐjìsuàn,noun,quantum computing,量子计算研究,quantum_computing.mp3,5,3,Master
+生物技术,shēngwùjìshù,noun,biotechnology,生物技术发展,biotechnology.mp3,5,3,Master
+基因工程,jīyīngōngchéng,noun,genetic engineering,基因工程应用,genetic_engineering.mp3,5,3,Master
+纳米技术,nàmǐjìshù,noun,nanotechnology,纳米技术研究,nanotechnology.mp3,5,3,Master
+新材料,xīncáiliào,noun,new materials,新材料开发,new_materials.mp3,5,3,Master
+新能源,xīnnéngyuán,noun,new energy,新能源技术,new_energy.mp3,5,3,Master
+可再生能源,kězàishēngnéngyuán,noun,renewable energy,可再生能源利用,renewable_energy.mp3,5,3,Master
+清洁能源,qīngjiénéngyuán,noun,clean energy,清洁能源发展,clean_energy.mp3,5,3,Master
+绿色技术,lǜsèjìshù,noun,green technology,绿色技术创新,green_technology.mp3,5,3,Master
+环保技术,huánbǎojìshù,noun,environmental technology,环保技术应用,environmental_technology.mp3,5,3,Master
+可持续发展,kěchíxùfāzhǎn,noun,sustainable development,可持续发展战略,sustainable_development.mp3,5,3,Master
+循环经济,xúnhuánjīngjì,noun,circular economy,循环经济模式,circular_economy.mp3,5,3,Master
+低碳经济,dītànjīngjì,noun,low-carbon economy,低碳经济发展,low_carbon_economy.mp3,5,3,Master
+数字经济,shùzìjīngjì,noun,digital economy,数字经济发展,digital_economy.mp3,5,3,Master
+知识经济,zhīshijīngjì,noun,knowledge economy,知识经济时代,knowledge_economy.mp3,5,3,Master
+创新经济,chuàngxīnjīngjì,noun,innovation economy,创新经济发展,innovation_economy.mp3,5,3,Master
+智慧经济,zhìhuìjīngjì,noun,smart economy,智慧经济模式,smart_economy.mp3,5,3,Master
+平台经济,píngtáijīngjì,noun,platform economy,平台经济发展,platform_economy.mp3,5,3,Master
+共享经济,gòngxiǎngjīngjì,noun,sharing economy,共享经济模式,sharing_economy.mp3,5,3,Master
+体验经济,tǐyànjīngjì,noun,experience economy,体验经济发展,experience_economy.mp3,5,3,Master
+注意力经济,zhùyìlìjīngjì,noun,attention economy,注意力经济模式,attention_economy.mp3,5,3,Master
+粉丝经济,fěnsījīngjì,noun,fan economy,粉丝经济发展,fan_economy.mp3,5,3,Master
+网红经济,wǎnghóngjīngjì,noun,influencer economy,网红经济模式,influencer_economy.mp3,5,3,Master
+直播经济,zhíbōjīngjì,noun,live streaming economy,直播经济发展,live_streaming_economy.mp3,5,3,Master
+短视频经济,duǎnshìpínjīngjì,noun,short video economy,短视频经济模式,short_video_economy.mp3,5,3,Master
+电商经济,diànshāngjīngjì,noun,e-commerce economy,电商经济发展,e_commerce_economy.mp3,5,3,Master
+新零售,xīnlíngshòu,noun,new retail,新零售模式,new_retail.mp3,5,3,Master
+无人零售,wúrénlíngshòu,noun,unmanned retail,无人零售技术,unmanned_retail.mp3,5,3,Master
+智能零售,zhìnénglíngshòu,noun,smart retail,智能零售系统,smart_retail.mp3,5,3,Master
+全渠道,quánqúdào,noun,omnichannel,全渠道营销,omnichannel.mp3,5,3,Master
+全场景,quánchǎngjǐng,noun,full scenario,全场景服务,full_scenario.mp3,5,3,Master
+全链路,quánliànlù,noun,full chain,全链路管理,full_chain.mp3,5,3,Master
+全生态,quánshēngtài,noun,full ecosystem,全生态建设,full_ecosystem.mp3,5,3,Master
+全生命周期,quánshēngmìngzhōuqī,noun,full lifecycle,全生命周期管理,full_lifecycle.mp3,5,3,Master
+全价值链,quánjiàzhíliàn,noun,full value chain,全价值链优化,full_value_chain.mp3,5,3,Master
+全产业链,quánchǎnyèliàn,noun,full industrial chain,全产业链布局,full_industrial_chain.mp3,5,3,Master
+全供应链,quángōngyìngliàn,noun,full supply chain,全供应链管理,full_supply_chain.mp3,5,3,Master
+全渠道营销,quánqúdàoyíngxiāo,noun,omnichannel marketing,全渠道营销策略,omnichannel_marketing.mp3,5,3,Master
+全场景营销,quánchǎngjǐngyíngxiāo,noun,full scenario marketing,全场景营销模式,full_scenario_marketing.mp3,5,3,Master
+全链路营销,quánliànlùyíngxiāo,noun,full chain marketing,全链路营销体系,full_chain_marketing.mp3,5,3,Master
+全生态营销,quánshēngtàiyíngxiāo,noun,full ecosystem marketing,全生态营销策略,full_ecosystem_marketing.mp3,5,3,Master
+全生命周期营销,quánshēngmìngzhōuqīyíngxiāo,noun,full lifecycle marketing,全生命周期营销,full_lifecycle_marketing.mp3,5,3,Master
+全价值链营销,quánjiàzhíliànyíngxiāo,noun,full value chain marketing,全价值链营销,full_value_chain_marketing.mp3,5,3,Master
+全产业链营销,quánchǎnyèliànyíngxiāo,noun,full industrial chain marketing,全产业链营销,full_industrial_chain_marketing.mp3,5,3,Master
+全供应链营销,quángōngyìngliànyíngxiāo,noun,full supply chain marketing,全供应链营销,full_supply_chain_marketing.mp3,5,3,Master
+全渠道销售,quánqúdàoxiāoshòu,noun,omnichannel sales,全渠道销售体系,omnichannel_sales.mp3,5,3,Master
+全场景销售,quánchǎngjǐngxiāoshòu,noun,full scenario sales,全场景销售模式,full_scenario_sales.mp3,5,3,Master
+全链路销售,quánliànlùxiāoshòu,noun,full chain sales,全链路销售体系,full_chain_sales.mp3,5,3,Master
+全生态销售,quánshēngtàixiāoshòu,noun,full ecosystem sales,全生态销售策略,full_ecosystem_sales.mp3,5,3,Master
+全生命周期销售,quánshēngmìngzhōuqīxiāoshòu,noun,full lifecycle sales,全生命周期销售,full_lifecycle_sales.mp3,5,3,Master
+全价值链销售,quánjiàzhíliànxiāoshòu,noun,full value chain sales,全价值链销售,full_value_chain_sales.mp3,5,3,Master
+全产业链销售,quánchǎnyèliànxiāoshòu,noun,full industrial chain sales,全产业链销售,full_industrial_chain_sales.mp3,5,3,Master
+全供应链销售,quángōngyìngliànxiāoshòu,noun,full supply chain sales,全供应链销售,full_supply_chain_sales.mp3,5,3,Master
+全渠道服务,quánqúdàofúwù,noun,omnichannel service,全渠道服务体系,omnichannel_service.mp3,5,3,Master
+全场景服务,quánchǎngjǐngfúwù,noun,full scenario service,全场景服务模式,full_scenario_service.mp3,5,3,Master
+全链路服务,quánliànlùfúwù,noun,full chain service,全链路服务体系,full_chain_service.mp3,5,3,Master
+全生态服务,quánshēngtàifúwù,noun,full ecosystem service,全生态服务策略,full_ecosystem_service.mp3,5,3,Master
+全生命周期服务,quánshēngmìngzhōuqīfúwù,noun,full lifecycle service,全生命周期服务,full_lifecycle_service.mp3,5,3,Master
+全价值链服务,quánjiàzhíliànfúwù,noun,full value chain service,全价值链服务,full_value_chain_service.mp3,5,3,Master
+全产业链服务,quánchǎnyèliànfúwù,noun,full industrial chain service,全产业链服务,full_industrial_chain_service.mp3,5,3,Master
+全供应链服务,quángōngyìngliànfúwù,noun,full supply chain service,全供应链服务,full_supply_chain_service.mp3,5,3,Master
+全渠道管理,quánqúdàoguǎnlǐ,noun,omnichannel management,全渠道管理体系,omnichannel_management.mp3,5,3,Master
+全场景管理,quánchǎngjǐngguǎnlǐ,noun,full scenario management,全场景管理模式,full_scenario_management.mp3,5,3,Master
+全链路管理,quánliànlùguǎnlǐ,noun,full chain management,全链路管理体系,full_chain_management.mp3,5,3,Master
+全生态管理,quánshēngtàiguǎnlǐ,noun,full ecosystem management,全生态管理策略,full_ecosystem_management.mp3,5,3,Master
+全生命周期管理,quánshēngmìngzhōuqīguǎnlǐ,noun,full lifecycle management,全生命周期管理,full_lifecycle_management.mp3,5,3,Master
+全价值链管理,quánjiàzhíliànguǎnlǐ,noun,full value chain management,全价值链管理,full_value_chain_management.mp3,5,3,Master
+全产业链管理,quánchǎnyèliànguǎnlǐ,noun,full industrial chain management,全产业链管理,full_industrial_chain_management.mp3,5,3,Master
+全供应链管理,quángōngyìngliànguǎnlǐ,noun,full supply chain management,全供应链管理,full_supply_chain_management.mp3,5,3,Master
+全渠道运营,quánqúdàoyùnyíng,noun,omnichannel operations,全渠道运营体系,omnichannel_operations.mp3,5,3,Master
+全场景运营,quánchǎngjǐngyùnyíng,noun,full scenario operations,全场景运营模式,full_scenario_operations.mp3,5,3,Master
+全链路运营,quánliànlùyùnyíng,noun,full chain operations,全链路运营体系,full_chain_operations.mp3,5,3,Master
+全生态运营,quánshēngtàiyùnyíng,noun,full ecosystem operations,全生态运营策略,full_ecosystem_operations.mp3,5,3,Master
+全生命周期运营,quánshēngmìngzhōuqīyùnyíng,noun,full lifecycle operations,全生命周期运营,full_lifecycle_operations.mp3,5,3,Master
+全价值链运营,quánjiàzhíliànyùnyíng,noun,full value chain operations,全价值链运营,full_value_chain_operations.mp3,5,3,Master
+全产业链运营,quánchǎnyèliànyùnyíng,noun,full industrial chain operations,全产业链运营,full_industrial_chain_operations.mp3,5,3,Master
+全供应链运营,quángōngyìngliànyùnyíng,noun,full supply chain operations,全供应链运营,full_supply_chain_operations.mp3,5,3,Master
+全渠道数字化,quánqúdàoshùzìhuà,noun,omnichannel digitalization,全渠道数字化转型,omnichannel_digitalization.mp3,5,3,Master
+全场景数字化,quánchǎngjǐngshùzìhuà,noun,full scenario digitalization,全场景数字化转型,full_scenario_digitalization.mp3,5,3,Master
+全链路数字化,quánliànlùshùzìhuà,noun,full chain digitalization,全链路数字化转型,full_chain_digitalization.mp3,5,3,Master
+全生态数字化,quánshēngtàishùzìhuà,noun,full ecosystem digitalization,全生态数字化转型,full_ecosystem_digitalization.mp3,5,3,Master
+全生命周期数字化,quánshēngmìngzhōuqīshùzìhuà,noun,full lifecycle digitalization,全生命周期数字化转型,full_lifecycle_digitalization.mp3,5,3,Master
+全价值链数字化,quánjiàzhíliànshùzìhuà,noun,full value chain digitalization,全价值链数字化转型,full_value_chain_digitalization.mp3,5,3,Master
+全产业链数字化,quánchǎnyèliànshùzìhuà,noun,full industrial chain digitalization,全产业链数字化转型,full_industrial_chain_digitalization.mp3,5,3,Master
+全供应链数字化,quángōngyìngliànshùzìhuà,noun,full supply chain digitalization,全供应链数字化转型,full_supply_chain_digitalization.mp3,5,3,Master
+全渠道智能化,quánqúdàozhìnéng huà,noun,omnichannel intellectualization,全渠道智能化转型,omnichannel_intellectualization.mp3,5,3,Master
+全场景智能化,quánchǎngjǐngzhìnéng huà,noun,full scenario intellectualization,全场景智能化转型,full_scenario_intellectualization.mp3,5,3,Master
+全链路智能化,quánliànlùzhìnéng huà,noun,full chain intellectualization,全链路智能化转型,full_chain_intellectualization.mp3,5,3,Master
+全生态智能化,quánshēngtàizhìnéng huà,noun,full ecosystem intellectualization,全生态智能化转型,full_ecosystem_intellectualization.mp3,5,3,Master
+全生命周期智能化,quánshēngmìngzhōuqīzhìnéng huà,noun,full lifecycle intellectualization,全生命周期智能化转型,full_lifecycle_intellectualization.mp3,5,3,Master
+全价值链智能化,quánjiàzhíliànzhìnéng huà,noun,full value chain intellectualization,全价值链智能化转型,full_value_chain_intellectualization.mp3,5,3,Master
+全产业链智能化,quánchǎnyèliànzhìnéng huà,noun,full industrial chain intellectualization,全产业链智能化转型,full_industrial_chain_intellectualization.mp3,5,3,Master
+全供应链智能化,quángōngyìngliànzhìnéng huà,noun,full supply chain intellectualization,全供应链智能化转型,full_supply_chain_intellectualization.mp3,5,3,Master
+全渠道自动化,quánqúdàozìdònghuà,noun,omnichannel automation,全渠道自动化转型,omnichannel_automation.mp3,5,3,Master
+全场景自动化,quánchǎngjǐngzìdònghuà,noun,full scenario automation,全场景自动化转型,full_scenario_automation.mp3,5,3,Master
+全链路自动化,quánliànlùzìdònghuà,noun,full chain automation,全链路自动化转型,full_chain_automation.mp3,5,3,Master
+全生态自动化,quánshēngtàizìdònghuà,noun,full ecosystem automation,全生态自动化转型,full_ecosystem_automation.mp3,5,3,Master
+全生命周期自动化,quánshēngmìngzhōuqīzìdònghuà,noun,full lifecycle automation,全生命周期自动化转型,full_lifecycle_automation.mp3,5,3,Master
+全价值链自动化,quánjiàzhíliànzìdònghuà,noun,full value chain automation,全价值链自动化转型,full_value_chain_automation.mp3,5,3,Master
+全产业链自动化,quánchǎnyèliànzìdònghuà,noun,full industrial chain automation,全产业链自动化转型,full_industrial_chain_automation.mp3,5,3,Master
+全供应链自动化,quángōngyìngliànzìdònghuà,noun,full supply chain automation,全供应链自动化转型,full_supply_chain_automation.mp3,5,3,Master

@@ -1,0 +1,11 @@
+Word,Phonetic,Type,Meaning,Example,Audio,TopicID,LanguageID,Difficulty
+gia đình,gia đình,noun,family,Tôi yêu gia đình tôi,family.mp3,1,1,Easy
+bố,bố,noun,father,Bố tôi là bác sĩ,father.mp3,1,1,Easy
+mẹ,mẹ,noun,mother,Mẹ tôi nấu ăn rất ngon,mother.mp3,1,1,Easy
+anh trai,anh trai,noun,older brother,Anh trai tôi học đại học,brother.mp3,1,1,Easy
+chị gái,chị gái,noun,older sister,Chị gái tôi rất xinh,sister.mp3,1,1,Easy
+family,fam-uh-lee,noun,gia đình,I love my family,family.mp3,1,2,Easy
+father,fa-ther,noun,bố,My father is a doctor,father.mp3,1,2,Easy
+mother,moth-er,noun,mẹ,My mother cooks well,mother.mp3,1,2,Easy
+brother,broth-er,noun,anh trai,My brother studies at university,brother.mp3,1,2,Easy
+sister,sis-ter,noun,chị gái,My sister is beautiful,sister.mp3,1,2,Easy

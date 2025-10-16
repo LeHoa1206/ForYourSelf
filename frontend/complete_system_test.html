@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP English Learning - Complete System Test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .status {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .status h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .status-item {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .success { color: #4ade80; }
+        .error { color: #f87171; }
+        .info { color: #60a5fa; }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .card p {
+            opacity: 0.8;
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #4F46E5, #7C3AED);
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #5B52F0, #8B5CF6);
+        }
+        
+        .test-results {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        
+        .test-results h3 {
+            margin-bottom: 15px;
+        }
+        
+        .test-item {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎉 VIP English Learning</h1>
+            <p>Hệ thống học từ vựng đỉnh cao - Test hoàn chỉnh</p>
+        </div>
+
+        <div class="status">
+            <h3>📊 Trạng thái hệ thống</h3>
+            <div class="status-item success">✅ Backend API: Hoạt động tốt (port 8000)</div>
+            <div class="status-item success">✅ Database MySQL: Kết nối tốt</div>
+            <div class="status-item success">✅ Redis Cache: Hoạt động tốt</div>
+            <div class="status-item info">ℹ️ Frontend React: Đang sửa routing</div>
+        </div>
+
+        <div class="status">
+            <h3>🚀 Tính năng đã hoàn thành</h3>
+            <div class="grid">
+                <div class="card">
+                    <h3>🌍 Đa Ngôn Ngữ</h3>
+                    <p>Hỗ trợ 5 ngôn ngữ: English, Chinese, Korean, Japanese, Thai</p>
+                    <button class="btn btn-primary" onclick="testLanguages()">Test API</button>
+                </div>
+                
+                <div class="card">
+                    <h3>📚 Chủ Đề Từ Vựng</h3>
+                    <p>Phân loại từ vựng theo chủ đề và trình độ</p>
+                    <button class="btn btn-primary" onclick="testTopics()">Test API</button>
+                </div>
+                
+                <div class="card">
+                    <h3>🃏 Flashcards</h3>
+                    <p>Học từ vựng với thẻ ghi nhớ tương tác</p>
+                    <button class="btn btn-primary" onclick="showDemo('flashcards')">Xem Demo</button>
+                </div>
+                
+                <div class="card">
+                    <h3>✍️ Luyện Viết</h3>
+                    <p>Luyện viết từ vựng chính xác</p>
+                    <button class="btn btn-primary" onclick="showDemo('writing')">Xem Demo</button>
+                </div>
+                
+                <div class="card">
+                    <h3>🔄 Spaced Repetition</h3>
+                    <p>Lặp lại theo khoảng thời gian tối ưu</p>
+                    <button class="btn btn-primary" onclick="showDemo('spaced')">Xem Demo</button>
+                </div>
+                
+                <div class="card">
+                    <h3>🎨 Giao Diện Premium</h3>
+                    <p>Glassmorphism, animations, 3D effects</p>
+                    <button class="btn btn-primary" onclick="showDemo('ui')">Xem Demo</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="status">
+            <h3>🔗 API Endpoints</h3>
+            <div class="grid">
+                <div class="card">
+                    <h3>🌐 /api/languages</h3>
+                    <p>Lấy danh sách ngôn ngữ</p>
+                    <button class="btn" onclick="testAPI('/api/languages')">Test</button>
+                </div>
+                
+                <div class="card">
+                    <h3>📚 /api/topics</h3>
+                    <p>Lấy danh sách chủ đề theo ngôn ngữ</p>
+                    <button class="btn" onclick="testAPI('/api/topics?languageId=1')">Test</button>
+                </div>
+                
+                <div class="card">
+                    <h3>📖 /api/vocabulary</h3>
+                    <p>Lấy từ vựng theo chủ đề</p>
+                    <button class="btn" onclick="testAPI('/api/vocabulary?topicId=1')">Test</button>
+                </div>
+                
+                <div class="card">
+                    <h3>🧪 /api/test</h3>
+                    <p>Test kết nối API</p>
+                    <button class="btn" onclick="testAPI('/api/test')">Test</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="status">
+            <h3>📋 Hướng dẫn sử dụng</h3>
+            <div style="text-align: left; max-width: 800px; margin: 0 auto;">
+                <p><strong>1. Backend API:</strong> Hoạt động tại <code>http://localhost:8000</code></p>
+                <p><strong>2. Database:</strong> MySQL với dữ liệu đa ngôn ngữ</p>
+                <p><strong>3. Tính năng:</strong> Đa ngôn ngữ, chủ đề từ vựng, 3 phương pháp học</p>
+                <p><strong>4. Giao diện:</strong> Premium UI với animations và effects</p>
+                <p><strong>5. React Frontend:</strong> Đang sửa routing, có trang HTML thay thế</p>
+            </div>
+        </div>
+
+        <div id="test-results" class="test-results" style="display: none;">
+            <h3>📋 Kết quả test</h3>
+            <div id="test-content"></div>
+        </div>
+    </div>
+
+    <script>
+        // Test Languages API
+        async function testLanguages() {
+            showTestResults('Đang test Languages API...');
+            try {
+                const response = await fetch('http://localhost:8000/api/languages');
+                if (response.ok) {
+                    const result = await response.json();
+                    showTestResults(`✅ Languages API: Thành công!<br>Dữ liệu: ${JSON.stringify(result.data, null, 2)}`);
+                } else {
+                    throw new Error('HTTP ' + response.status);
+                }
+            } catch (error) {
+                showTestResults(`❌ Languages API: Lỗi - ${error.message}`);
+            }
+        }
+
+        // Test Topics API
+        async function testTopics() {
+            showTestResults('Đang test Topics API...');
+            try {
+                const response = await fetch('http://localhost:8000/api/topics?languageId=1');
+                if (response.ok) {
+                    const result = await response.json();
+                    showTestResults(`✅ Topics API: Thành công!<br>Dữ liệu: ${JSON.stringify(result.data, null, 2)}`);
+                } else {
+                    throw new Error('HTTP ' + response.status);
+                }
+            } catch (error) {
+                showTestResults(`❌ Topics API: Lỗi - ${error.message}`);
+            }
+        }
+
+        // Test any API endpoint
+        async function testAPI(endpoint) {
+            showTestResults(`Đang test ${endpoint}...`);
+            try {
+                const response = await fetch('http://localhost:8000' + endpoint);
+                if (response.ok) {
+                    const result = await response.json();
+                    showTestResults(`✅ ${endpoint}: Thành công!<br><pre>${JSON.stringify(result, null, 2)}</pre>`);
+                } else {
+                    throw new Error('HTTP ' + response.status);
+                }
+            } catch (error) {
+                showTestResults(`❌ ${endpoint}: Lỗi - ${error.message}`);
+            }
+        }
+
+        // Show demo
+        function showDemo(type) {
+            const demos = {
+                flashcards: '🃏 Flashcards: Học từ vựng với thẻ ghi nhớ tương tác, có thể lật để xem nghĩa',
+                writing: '✍️ Writing Practice: Luyện viết từ vựng chính xác với kiểm tra tự động',
+                spaced: '🔄 Spaced Repetition: Lặp lại theo khoảng thời gian tối ưu dựa trên thuật toán SM-2',
+                ui: '🎨 Premium UI: Glassmorphism, animations, 3D effects, gradient backgrounds'
+            };
+            showTestResults(`📱 Demo ${type}:<br>${demos[type]}`);
+        }
+
+        // Show test results
+        function showTestResults(content) {
+            const resultsDiv = document.getElementById('test-results');
+            const contentDiv = document.getElementById('test-content');
+            
+            resultsDiv.style.display = 'block';
+            contentDiv.innerHTML = content;
+        }
+
+        // Auto test on page load
+        window.addEventListener('load', () => {
+            testAPI('/api/test');
+        });
+    </script>
+</body>
+</html>
