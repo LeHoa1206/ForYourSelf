@@ -13,10 +13,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 try {
+    // Get database credentials from environment variables
+    $host = $_ENV['DB_HOST'] ?? 'localhost';
+    $dbname = $_ENV['DB_NAME'] ?? 'vip_english_learning';
+    $username = $_ENV['DB_USER'] ?? 'vip_user';
+    $password = $_ENV['DB_PASSWORD'] ?? 'vip_password';
+    
     $pdo = new PDO(
-        "mysql:host=mysql;dbname=vip_english_learning;charset=utf8mb4", 
-        "vip_user", 
-        "vip_password",
+        "mysql:host=$host;dbname=$dbname;charset=utf8mb4", 
+        $username, 
+        $password,
         [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
